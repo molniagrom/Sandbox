@@ -86,3 +86,27 @@ for (const row of rows) {
 }
 
 console.log(result);
+
+// .................................................................................
+
+// К сожалению, теперь основание пирамиды исчезло. Это связано с тем, что вы создали еще одну ошибку off-by-one. Ваш первоначальный цикл выполнялся для значений i от 0 до 7, потому что count равен 8, а ваше условие требует, чтобы i был меньше count. Теперь ваш цикл выполняется для значений i от 1 до 7. Ваш цикл нужно обновить, чтобы он выполнялся и при значении i равном 8. Если посмотреть на вашу логику, это означает, что цикл должен выполняться, когда i меньше или равно count. Для этого можно использовать оператор less than or equal to <=. Обновите условие цикла, чтобы он выполнялся, пока i меньше или равно count.
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+for (let i = 1; i <= count; i++) {
+    rows.push(padRow(i, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+    result = result + "\n" + row;
+}
+
+console.log(result);
