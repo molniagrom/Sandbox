@@ -143,3 +143,14 @@ for (const row of rows) {
 }
 
 console.log(result);
+
+//.................................................................
+
+let done = 0;
+
+while (rows.length < count) {
+    done++;
+    rows.push(padRow(done, count));
+}
+
+//..................................................................
