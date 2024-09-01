@@ -1,12 +1,12 @@
 //Реализуйте функцию, которая преобразует заданное логическое значение в его строковое представление.
-
-function booleanToString(bool){
-
-    return bool.toString();
-
-    console.log(booleanToString(true));
-    console.log(booleanToString(false));
-}
+//
+// function booleanToString(bool){
+//
+//     return bool.toString();
+//
+//     console.log(booleanToString(true));
+//     console.log(booleanToString(false));
+// }
 
 //........................................................................
 
@@ -18,40 +18,65 @@ function booleanToString(bool){
 // Учитывая, что [34, -345, -1, 100]ваше решение вернется-345
 // Для целей этого ката можно предположить, что предоставленный массив не будет пустым.
 
-function findSmallestInt(arr) {
-    // Math.min и оператор расширения, ищет наименьшее число
-    let smallest = Math.min(...arr);
+// Function findSmallestInt(arr) {
+    // Используем Math.min для поиска наименьшего числа в массиве.
+    // Оператор расширения ... раскладывает массив arr на отдельные элементы,
+    // чтобы Math.min мог их сравнить.
+//     return Math.min(...arr);
+// }
 
-    // Возвращаем наименьшее число
-    return smallest;
-}
-
-console.log(findSmallestInt([34, 15, 88, 2])); // Выведет 2
-console.log(findSmallestInt([34, -345, -1, 100])); // Выведет -345
+// console.log(findSmallestInt([34, 15, 88, 2])); // Выведет 2
+// console.log(findSmallestInt([34, -345, -1, 100])); // Выведет -345
 
 //................................................................................
 
-function greet() {
-    return "hello world!";
-}
-greet()
+// function greet() {
+//     return "hello world!";
+// }
+// greet()
 
 // .............................................
 
 // Convert boolean values to strings 'Yes' or 'No'.
 
-function boolToWord( bool ){
-    if(bool === true) {
-        return "Yes";
-    } else if (bool === false) {
-        return "No"
-    }
-}
+// function boolToWord( bool ){
+//     if(bool === true) {
+//         return "Yes";
+//     } else if (bool === false) {
+//         return "No"
+//     }
+// }
 
 // .........................................................
 // Дополните решение так, чтобы оно перевернуло переданную в него строку.
 
-function solution(str){
-    return str.split('').reverse().join('');
+// function solution(str){
+//     return str.split('').reverse().join('');
+//
+// }
 
-}
+//................................................................
+
+// какими способами можно преобразовать число (целое число) в строку? есть ещё способы... || num.toString(); || let str = `${num}`; || let str = num.toString();
+// function numberToString(num) {
+//     return ''+num;
+// }
+
+//.................................................................
+// Ваша задача - сделать две функции (max и min, или maximum и minimum, и т.д., в зависимости от языка), которые получают на вход список целых чисел и возвращают наибольшее и наименьшее число в этом списке соответственно.
+
+// var min = function(list){
+//     return Math.min(...list)
+// }
+//
+// var max = function(list){
+//
+//     return Math.max(...list)
+// }
+
+// .....................................................................................
+
+
+
+
+
