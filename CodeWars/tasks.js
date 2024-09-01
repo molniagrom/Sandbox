@@ -76,7 +76,24 @@
 
 // .....................................................................................
 
+// Напишите функцию findNeedle(), которая принимает array полный мусор, но содержит один"needle"
+//
+// После того, как ваша функция найдет иглу, она должна вернуть сообщение (в виде строки), которое гласит:
+//
+// "found the needle at position "плюс он index нашел иголку, так что:
+//
+// Пример (Вход -> Выход)
+//
+// ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
+// Примечание: в COBOL это должно возвращать "found the needle at position 6"
 
+function findNeedle(array) {
+    //  Метод indexOf, находит позицию "needle" в массиве
+    let index = array.indexOf("needle");
+
+    // Возвращаем сообщение с найденным индексом
+    return "found the needle at position " + index;
+}
 
 
 
