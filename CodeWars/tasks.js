@@ -87,14 +87,22 @@
 // ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
 // Примечание: в COBOL это должно возвращать "found the needle at position 6"
 
-function findNeedle(array) {
-    //  Метод indexOf, находит позицию "needle" в массиве
-    let index = array.indexOf("needle");
+// function findNeedle(array) {
+//     //  Метод indexOf, находит позицию "needle" в массиве
+//     let index = array.indexOf("needle");
+//
+//     // Возвращаем сообщение с найденным индексом
+//     return "found the needle at position " + index;
+// }
 
-    // Возвращаем сообщение с найденным индексом
-    return "found the needle at position " + index;
-}
+// ..........................................................................
+// Противоположное число
 
+// function opposite(number) {
+//     return -number;
+// }
+
+// .......................................................
 
 
 
