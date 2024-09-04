@@ -360,16 +360,16 @@
 
 // Палиндром — это слово, число, фраза или другая последовательность символов, которая читается одинаково как в прямом, так и в обратном порядке, например madam или racecar.
 
-function isPalindrome(x) {
-    // Приведение строки к нижнему регистру
-    const cleanedString = x.toLowerCase();
-
-    // Создание реверсированного варианта строки
-    const reversedString = cleanedString.split('').reverse().join('');
-
-    // Сравнение оригинальной строки с реверсированной
-    return cleanedString === reversedString;
-}
+// function isPalindrome(x) {
+//     // Приведение строки к нижнему регистру
+//     const cleanedString = x.toLowerCase();
+//
+//     // Создание реверсированного варианта строки
+//     const reversedString = cleanedString.split('').reverse().join('');
+//
+//     // Сравнение оригинальной строки с реверсированной
+//     return cleanedString === reversedString;
+// }
 
 // ...........................................................................................
 
