@@ -1,5 +1,3 @@
-//Random Background Color changer
-
 const darkColorsArr = [
     "#2C3E50",
     "#34495E",
@@ -12,3 +10,7 @@ const darkColorsArr = [
     "#2C3E50",
     "#800020",
 ];
+function getRandomIndex() {
+    console.log(darkColorsArr.length * Math.random())
+}
+getRandomIndex();
