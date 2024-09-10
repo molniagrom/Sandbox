@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="interrogation">
+        <div class="interrogation__container ">
+            <div class="interrogation__head">
+                <h1 id="title">Форма опроса от Меня</h1>
+                <p id="description">Спасибо, что нашли время помочь нам улучшить платформу.</p>
+            </div>
+            <form id="survey-form" action="#">
+
+                <div class="interrogation__item">
+                    <label id="name-label" for="name">Имя</label>
+                    <input placeholder="Введите своё имя" id="name" type="text">
+                </div>
+                <div class="interrogation__item">
+                    <label id="email-label" for="email">Электронная почта</label>
+                    <input placeholder="Введите свой адрес электронной почты" id="email" type="email">
+                </div>
+                <div class="interrogation__item">
+                    <label id="number-label" for="number">Номер</label>
+                    <input placeholder="Введите свой номер" id="number" type="number">
+                </div>
+
+                <div class="interrogation__item">
+                    <label id="characterization-select" for="dropdown">Что из этого описывает тебя больше всего?</label>
+                    <select name="characterization" id="dropdown">
+                        <option value="1">Ответственный</option>
+                        <option value="2">Эмпатичный</option>
+                        <option value="3">Целеустремленный</option>
+                        <option value="4">Коммуникабельный</option>
+                        <option value="5">Творческий</option>
+                        <option value="6">Добросовестный</option>
+                    </select>
+                </div>
+
+
+                <div class="interrogation__item">
+                    <label for="married"><input id="married" type="radio" name="married" checked/> Женат</label>
+                    <label for="single"><input id="single" type="radio" name="married"/> Не женат</label>
+                </div>
+
+                <div class="interrogation__item">
+                    <fieldset>
+                        <legend>что из этого у тебя есть?</legend>
+                        <input id="Critical-thinking" type="checkbox" name="personality" value="Critical-thinking">
+                        <label for="Critical-thinking">Критическое мышление</label>
+                        <input id="Flexibility" type="checkbox" name="Flexibility" value="lazy"> <label
+                            for="Flexibility">Гибкость</label>
+                        <input id="Problem-solving-skills" type="checkbox" name="personality"
+                               value="Problem-solving-skills"> <label for="Problem-solving-skills">Навыки решения
+                        проблем</label>
+                    </fieldset>
+
+                </div>
+
+                <div class="interrogation__item">
+                    <label for="bio">Если вам есть что добавить:
+                        <textarea id="bio" name="bio" rows="3" cols="30"></textarea>
+                    </label>
+                </div>
+
+                <div class="interrogation__item">
+                    <input type="submit" value="Submit"/>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
