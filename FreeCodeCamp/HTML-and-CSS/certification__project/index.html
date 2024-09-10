@@ -15,20 +15,18 @@
                 <p id="description">Спасибо, что нашли время помочь нам улучшить платформу.</p>
             </div>
             <form id="survey-form" action="#">
-
                 <div class="interrogation__item">
                     <label id="name-label" for="name">Имя</label>
-                    <input placeholder="Введите своё имя" id="name" type="text">
+                    <input required placeholder="Введите своё имя" id="name" type="text">
                 </div>
                 <div class="interrogation__item">
                     <label id="email-label" for="email">Электронная почта</label>
-                    <input placeholder="Введите свой адрес электронной почты" id="email" type="email">
+                    <input required placeholder="Введите свой адрес электронной почты" id="email" type="email">
                 </div>
                 <div class="interrogation__item">
                     <label id="number-label" for="number">Номер</label>
-                    <input placeholder="Введите свой номер" id="number" type="number">
+                    <input min="9" max="20" placeholder="Введите свой номер" id="number" type="number">
                 </div>
-
                 <div class="interrogation__item">
                     <label id="characterization-select" for="dropdown">Что из этого описывает тебя больше всего?</label>
                     <select name="characterization" id="dropdown">
@@ -40,39 +38,26 @@
                         <option value="6">Добросовестный</option>
                     </select>
                 </div>
-
-
                 <div class="interrogation__item">
-                    <label for="married"><input id="married" type="radio" name="married" checked/> Женат</label>
-                    <label for="single"><input id="single" type="radio" name="married"/> Не женат</label>
+                    <label for="married"><input id="married" value="married" type="radio" name="married" checked/> Женат</label>
+                    <label for="single"><input id="single" value="single" type="radio" name="married"/> Не женат</label>
                 </div>
-
                 <div class="interrogation__item">
                     <fieldset>
                         <legend>что из этого у тебя есть?</legend>
-                        <input id="Critical-thinking" type="checkbox" name="personality" value="Critical-thinking">
-                        <label for="Critical-thinking">Критическое мышление</label>
-                        <input id="Flexibility" type="checkbox" name="Flexibility" value="lazy"> <label
-                            for="Flexibility">Гибкость</label>
-                        <input id="Problem-solving-skills" type="checkbox" name="personality"
-                               value="Problem-solving-skills"> <label for="Problem-solving-skills">Навыки решения
-                        проблем</label>
+
+                        <label for="Critical-thinking"><input id="Critical-thinking" type="checkbox" name="personality" value="Critical-thinking">Критическое мышление</label>
+                        <label for="Flexibility"> <input id="Flexibility" type="checkbox" name="Flexibility" value="lazy">Гибкость</label>
+                         <label for="Problem-solving-skills"><input id="Problem-solving-skills" type="checkbox" name="personality" value="Problem-solving-skills">Навыки решения проблем</label>
                     </fieldset>
-
                 </div>
-
                 <div class="interrogation__item">
                     <label for="bio">Если вам есть что добавить:
                         <textarea id="bio" name="bio" rows="3" cols="30"></textarea>
                     </label>
                 </div>
-
-                <div class="interrogation__item">
-                    <input type="submit" value="Submit"/>
-                </div>
+                <input type="submit" value="Submit" id="submit"/>
             </form>
-
-
         </div>
     </div>
 
