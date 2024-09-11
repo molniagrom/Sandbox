@@ -56,4 +56,42 @@
 // ясм
 // .............................................................................................
 
+// АЛЬТЕРНАТИВНЫЙ РЕГИСТР <=> АЛЬТЕРНАТИВНЫЙ РЕГИСТР
+// Определите String.prototype.toAlternatingCase(или аналогичную функцию/метод, например, to_alternating_case / toAlternatingCase/ ToAlternatingCase​​на выбранном вами языке; подробности см. в исходном решении ) так, чтобы каждая строчная буква стала заглавной, а каждая заглавная буква стала строчной. Например:
+//
+// "hello world".toAlternatingCase() === "HELLO WORLD"
+// "HELLO WORLD".toAlternatingCase() === "hello world"
+// "hello WORLD".toAlternatingCase() === "HELLO world"
+// "HeLLo WoRLD".toAlternatingCase() === "hEllO wOrld"
+// "12345".toAlternatingCase()       === "12345"                   // Non-alphabetical characters are unaffected
+// "1a2b3c4d5e".toAlternatingCase()  === "1A2B3C4D5E"
+// "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
+// Как обычно, ваша функция/метод должны быть чистыми, т.е. они не должны изменять исходную строку.
+
+// // Добавляем метод toAlternatingCase к объекту String
+// String.prototype.toAlternatingCase = function () {
+//     // 'this' в данном контексте указывает на строку, с которой мы работаем
+//     // Например, если мы вызовем "hello world".toAlternatingCase(),
+//     // 'this' будет равно строке "hello world".
+//
+//     // split('') разбивает строку на массив символов.
+//     // Например, "hello" превратится в ["h", "e", "l", "l", "o"].
+//     return this.split('').map(char => {
+//
+//         // Проверяем, является ли символ заглавной буквой
+//         if (char === char.toUpperCase()) {
+//             // Если символ заглавный, превращаем его в строчный и возвращаем
+//             return char.toLowerCase();
+//         } else {
+//             // Иначе (если символ строчный), превращаем его в заглавный и возвращаем
+//             return char.toUpperCase();
+//         }
+//
+//     }).join(''); // join('') соединяет массив символов обратно в строку
+// };
+
+// ....................................................................................................................................
+
+
+
 
