@@ -1,0 +1,124 @@
+/* Общие стили для всего документа */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Светло-голубой фон */
+    color: #333;
+    padding: 20px;
+}
+
+/* Стиль для обертки формы */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Контейнер формы */
+.interrogation__container {
+    background-color: #e0f7fa; /* Нежный голубой */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%; /* Для адаптивности */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Заголовки формы */
+.interrogation__head h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00796b; /* Нежный зелёный */
+}
+
+.interrogation__head p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004d40; /* Темнее зелёный */
+}
+
+/* Общие стили для элементов формы */
+.interrogation__item {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #00796b; /* Нежный зелёный */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b2dfdb; /* Светло-зелёная рамка */
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Стили для радио-кнопок и чекбоксов */
+.interrogation__item fieldset {
+    border: none;
+    padding: 0;
+}
+
+.interrogation__item legend {
+    font-size: 16px;
+    color: #004d40; /* Темнее зелёный */
+    margin-bottom: 10px;
+}
+
+/* Кнопка отправки */
+#submit {
+    background-color: #00796b; /* Нежный зелёный */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#submit:hover {
+    background-color: #004d40; /* Темнее зелёный при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .interrogation__container {
+        padding: 15px;
+    }
+
+    .interrogation__head h1 {
+        font-size: 20px;
+    }
+
+    #submit {
+        font-size: 14px;
+    }
+}
