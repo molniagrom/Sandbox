@@ -161,11 +161,35 @@
 
 // ....................................................................................................
 
+// Объекты
 
+// let user = {
+    // name: "John",
+    // surname: "Smith"
+// }
 
+// user.name = "Pete";
+// delete user.name;
+// console.log(user.name);
 
+// function isEmpty(obj) {
+    // if (Object.keys(obj).length === 0) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+//     return Object.keys(obj).length === 0;
+// }
 
+// or
 
+// function isEmpty(obj) {
+//     for (let key in obj) {
+//         // если тело цикла начнет выполняться - значит в объекте есть свойства
+//         return false;
+//     }
+//     return true;
+// }
 
 
 
