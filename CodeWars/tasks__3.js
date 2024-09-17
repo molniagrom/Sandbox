@@ -344,17 +344,22 @@
 // 75, если оценка за экзамен больше 50 и количество выполненных проектов не менее 2.
 // 0, в других случаях
 
-function finalGrade(exam, projects) {
-    if (exam > 90 || projects > 10) {
-        return 100;
-    } else if (exam > 75 && projects >= 5) {
-        return 90;
-    } else if (exam > 50 && projects >= 2) {
-        return 75;
-    } else {
-        return 0;
-    }
-}
+// function finalGrade(exam, projects) {
+//     if (exam > 90 || projects > 10) {
+//         return 100;
+//     } else if (exam > 75 && projects >= 5) {
+//         return 90;
+//     } else if (exam > 50 && projects >= 2) {
+//         return 75;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// .................................................................................................
+
+
+
 
 
 
