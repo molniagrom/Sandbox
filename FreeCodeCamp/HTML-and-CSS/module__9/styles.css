@@ -1,7 +1,13 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
     background: #f5f6f7;
     color: #1b1b32;
-    font-family: Helvetica;
+    font-family: Helvetica, serif;
     margin: 0;
 }
 
@@ -75,12 +81,12 @@ section {
 
 h1,
 h2 {
-    font-family: Verdana, Tahoma;
+    font-family: Verdana, Tahoma, serif;
 }
 
 h2 {
     border-bottom: 4px solid #dfdfe2;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 60px;
 }
 
@@ -90,7 +96,7 @@ h2 {
 
 .formrow {
     margin-top: 30px;
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
 input {
@@ -123,7 +129,7 @@ input {
 h3 {
     margin-top: 5px;
     padding-left: 15px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 h3::before {
@@ -135,7 +141,36 @@ h3::before {
     padding-bottom: 0;
 }
 
+.answers-list {
+    list-style: none;
+    padding: 0;
+}
 
+button {
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+    font-size: 23px;
+    background: #d0d0d5;
+    border: 3px solid #3b3b4f;
+}
+
+footer {
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+}
+
+footer,
+footer a {
+    color: #dfdfe2;
+}
+
+address {
+    text-align: center;
+    padding: 0.3em;
+}
 
 .sr-only {
     position: absolute;
