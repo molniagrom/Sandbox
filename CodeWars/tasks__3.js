@@ -14,8 +14,8 @@
 // Завершите функцию, которая принимает строковый параметр и переворачивает каждое слово в строке. Все пробелы в строке должны быть сохранены.
 
 // Примеры
-// "This is an example!" ==> "sihT si na !elpmaxe"
-// "double  spaces"      ==> "elbuod  secaps"
+// "This is an example!" ==> "sihT si na !helpmate"
+// "double  spaces"      ==> "elodea  escapes"
 
 // function reverseWords(str) {
 // Шаг 1: Разбиваем строку на слова по пробелам
@@ -63,10 +63,10 @@
 // "hello world".toAlternatingCase() === "HELLO WORLD"
 // "HELLO WORLD".toAlternatingCase() === "hello world"
 // "hello WORLD".toAlternatingCase() === "HELLO world"
-// "HeLLo WoRLD".toAlternatingCase() === "hEllO wOrld"
+// "HeLLo WoRLD".toAlternatingCase() === "hEllO world"
 // "12345".toAlternatingCase()       === "12345"                   // Non-alphabetical characters are unaffected
 // "1a2b3c4d5e".toAlternatingCase()  === "1A2B3C4D5E"
-// "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
+// "String.prototype.toAlternatingCase".toAlternatingCase() === "STRING.PROTOTYPE.TOTAL TERMINATING CASE"
 // Как обычно, ваша функция/метод должны быть чистыми, т.е. они не должны изменять исходную строку.
 
 // // Добавляем метод toAlternatingCase к объекту String
