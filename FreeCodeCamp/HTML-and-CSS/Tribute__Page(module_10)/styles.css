@@ -9,3 +9,89 @@
    justify-content: center;
     max-width: 100%;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa; /* Светло-голубой фон */
+  color: #004d40; /* Темно-голубой текст */
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #00796b; /* Ярко-голубой заголовок */
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #4db6ac; /* Границу изображения */
+  border-radius: 10px;
+}
+
+#img-caption {
+  font-size: 0.9em;
+  color: #00695c; /* Немного темнее для подписи */
+}
+
+#tribute-info {
+  background-color: #b2ebf2; /* Светло-голубой фон для информации */
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #00796b; /* Разделитель между элементами списка */
+}
+
+li:last-child {
+  border-bottom: none; /* Убираем нижнюю границу у последнего элемента */
+}
+
+#tribute-link {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #009688; /* Цвет кнопки */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#tribute-link:hover {
+  background-color: #00796b; /* Темнее при наведении */
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #004d40; /* Цвет текста в футере */
+}
