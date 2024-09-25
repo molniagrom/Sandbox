@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техническая Документация по JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+      <header><h1>Техническая Документация</h1></header>
+        
+        <ul>
+            <li><a href="#introduction" class="nav-link">introduction</a></li>
+            <li><a href="#hello_world" class="nav-link">hello world</a></li>
+            <li><a href="#variables" class="nav-link">variables</a></li>
+            <li><a href="#data_types" class="nav-link">data types</a></li>
+            <li><a href="#functions" class="nav-link">functions</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+     
+        <section class="main-section" id="introduction">
+          <header>introduction</header>
+            <h2>Введение</h2>
+            <p>JavaScript — это кросс-платформенный объектно-ориентированный язык сценариев.</p>
+            <p>Он мал и легок, и в среде хоста (например, веб-браузере) JavaScript может управлять объектами своего окружения.</p>
+        </section>
+
+        <section class="main-section" id="hello_world">
+          <header>hello world</header>
+            <h2>Hello world</h2>
+            <p>Для начала работы с JavaScript, напишите следующий код:</p>
+            <code>function greetMe(yourName) { alert("Hello " + yourName); }</code>
+            <p>Вызовите функцию:</p>
+            <code>greetMe("Мир");</code>
+        </section>
+
+        <section class="main-section" id="variables">
+          <header>variables</header>
+            <h2>Переменные</h2>
+            <p>Переменные используются как символические имена для значений в вашем приложении.</p>
+            <p>Вы можете объявить переменные несколькими способами:</p>
+            <ul>
+                <li>С помощью ключевого слова <code>var</code>.</li>
+                <li>Простым присваиванием значения (что не рекомендуется).</li>
+                <li>С помощью ключевого слова <code>let</code>.</li>
+            </ul>
+            <p>Каждый из этих методов имеет свои особенности и область применения.</p>
+            <p>Обязательно выбирайте подходящий способ в зависимости от контекста.</p>
+        </section>
+
+        <section class="main-section" id="data_types">
+          <header>data types</header>
+            <h2>Типы данных</h2>
+            <p>JavaScript поддерживает несколько типов данных, включая:</p>
+            <ul>
+                <li><code>Boolean</code>: true и false.</li>
+                <li><code>null</code>: специальное значение, обозначающее отсутствие значения.</li>
+                <li><code>undefined</code>: значение не определено.</li>
+                <li><code>Number</code>: целые и дробные числа.</li>
+                <li><code>String</code>: последовательности символов.</li>
+            </ul>
+            <p>Каждый из этих типов данных имеет свои особенности и способы использования.</p>
+        </section>
+
+        <section class="main-section" id="functions">
+          <header>functions</header>
+            <h2>Функции</h2>
+            <p>Функция определяется с использованием ключевого слова <code>function</code>.</p>
+            <p>Пример простой функции:</p>
+            <code>function square(number) { return number * number; }</code>
+            <p>Функции могут принимать параметры и возвращать значения.</p>
+            <p>Это позволяет создавать более модульный и читаемый код.</p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  background-color: #e6f7ff; /* Мягкий голубой фон */
+}
+
+#navbar {
+  width: 250px;
+  background-color: #b3e0ff; /* Светло-голубой цвет панели навигации */
+  padding: 15px;
+  position: fixed;
+  height: 100%;
+  transition: background-color 0.3s ease; /* Плавный переход цвета */
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+}
+
+#navbar:hover {
+  background-color: #99d6ff; /* Изменение цвета панели при наведении */
+}
+
+#main-doc {
+  margin-left: 270px;
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #ffffff; /* Белый фон для основного контента */
+  transition: margin-left 0.5s ease; /* Плавный сдвиг */
+}
+
+.main-section {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards; /* Анимация появления секций */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2 {
+  color: #0066cc; /* Глубокий голубой цвет для заголовков */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #004080; /* Темно-синий цвет для ссылок */
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и движения */
+}
+
+.nav-link:hover {
+  color: #003366;
+  transform: translateX(10px); /* Движение ссылки вправо при наведении */
+  text-decoration: underline;
+}
+
+code {
+  background-color: #e6f7ff; /* Светло-голубой фон */
+  color: #333; /* Темно-серый цвет текста */
+  padding: 7px 5px; /* Внутренние отступы */
+  border-radius: 8px; /* Закругленные углы */
+  font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт */
+  display: inline-block; /* Чтобы padding работал корректно */
+}
+
+
+@media (max-width: 600px) {
+  #navbar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+  }
+  #main-doc {
+      margin-left: 0;
+  }
+}
