@@ -719,7 +719,6 @@ function reverse(string) {
 function stringToArray(string) {
   return string.split(" ");
 }
-
 // ................................................................................................
 
 
