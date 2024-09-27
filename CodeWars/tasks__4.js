@@ -677,15 +677,35 @@ function xor(a, b) {
 // ["Keep", "Remove", "Keep", "Remove", "Keep", ...]-->["Keep", "Keep", "Keep", ...]
 // Ни один из массивов не будет пустым, так что вам не о чем беспокоиться!
 
-function removeEveryOther(arr){
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if(i % 2 === 0){
-      newArr.push(arr[i])
-    }
-  }
-  return newArr;
-}
+// function removeEveryOther(arr){
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if(i % 2 === 0){
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr;
+// }
 
 // ............................................................................................................
 
+// Вам нужно написать функцию, которая переворачивает слова в заданной строке. Слова всегда разделяются одним пробелом.
+// Поскольку входные данные могут содержать конечные пробелы, вам также придется игнорировать ненужные пробелы.
+// Пример ( Вход -> Выход )
+
+// "Hello World" --> "World Hello"
+// "Hi There." --> "There. Hi"
+
+
+function reverse(string) {
+  // Удаляем лишние пробелы и разбиваем строку на слова
+  const words = string.trim().replace(/\s+/g, ' ').split(' ');
+  
+  // Переворачиваем массив слов
+  const reversedWords = words.reverse();
+  
+  // Объединяем слова обратно в строку
+  return reversedWords.join(' ');
+}
+
+// .............................................................................
