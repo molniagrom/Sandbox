@@ -650,7 +650,7 @@ function xor(a, b) {
 // 1,2,3 -> false
 // -5,1,3 -> false
 // 0,2,3 -> false
-// 1,2,9 -> false 
+// 1,2,9 -> false
 
 // я сама написала...)))
 // function isTriangle(a, b, c) {
@@ -696,16 +696,30 @@ function xor(a, b) {
 // "Hello World" --> "World Hello"
 // "Hi There." --> "There. Hi"
 
-
 function reverse(string) {
   // Удаляем лишние пробелы и разбиваем строку на слова
-  const words = string.trim().replace(/\s+/g, ' ').split(' ');
-  
+  const words = string.trim().replace(/\s+/g, " ").split(" ");
+
   // Переворачиваем массив слов
   const reversedWords = words.reverse();
-  
+
   // Объединяем слова обратно в строку
-  return reversedWords.join(' ');
+  return reversedWords.join(" ");
 }
 
 // .............................................................................
+
+// Напишите функцию для разбиения строки и преобразования ее в массив слов.
+// Примеры (Вход ==> Выход):
+// "Robin Singh" ==> ["Robin", "Singh"]
+
+// "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+// Я сама написала
+function stringToArray(string) {
+  return string.split(" ");
+}
+
+// ................................................................................................
+
+
