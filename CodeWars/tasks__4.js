@@ -653,19 +653,39 @@ function xor(a, b) {
 // 1,2,9 -> false 
 
 // я сама написала...)))
-function isTriangle(a, b, c) {
-  if (a + b > c && a + c > b && b + c > a) {
-    if (a || b || c > 0) {
-      return true;
-    } else {
-      return false;
-    }
-  } else {
-    return false;
-  }
-}
+// function isTriangle(a, b, c) {
+//   if (a + b > c && a + c > b && b + c > a) {
+//     if (a || b || c > 0) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   } else {
+//     return false;
+//   }
+// }
+
+// ***
+// function isTriangle(a,b,c){
+//    return a + b > c && a + c > b && c + b > a;
+// }
 
 // .......................................................................................................
 
+// Возьмите массив и удалите каждый второй элемент из массива. Всегда сохраняйте первый элемент и начинайте удаление со следующего элемента.
+// Пример:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...]-->["Keep", "Keep", "Keep", ...]
+// Ни один из массивов не будет пустым, так что вам не о чем беспокоиться!
 
+function removeEveryOther(arr){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if(i % 2 === 0){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
+}
+
+// ............................................................................................................
 
