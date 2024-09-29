@@ -829,3 +829,46 @@ function position(letter) {
 
 // .....................................................................................................
 
+// Подумайте о способе хранения языков в виде базы данных. Языки перечислены ниже, так что вы можете копировать и вставлять!
+// Напишите функцию 'welcome', которая принимает параметр 'language' с типом Stringи возвращает приветствие - если оно есть в вашей базе данных. По умолчанию она должна быть на английском языке, если язык отсутствует в базе данных или в случае недопустимого ввода.
+// База данных
+// Пожалуйста, измените это в соответствии с вашим языком.
+// Возможные недействительные входные данные включают в себя:
+
+// IP_ADDRESS_INVALID - not a valid ipv4 or ipv6 ip address
+// IP_ADDRESS_NOT_FOUND - ip address not in the database
+// IP_ADDRESS_REQUIRED - no ip address was supplied
+
+function greet(language) {
+
+  let base = [
+    ["english", "Welcome"],
+    ["czech", "Vitejte"],
+    ["danish", "Velkomst"],
+    ["dutch", "Welkom"],
+    ["estonian", "Tere tulemast"],
+    ["finnish", "Tervetuloa"],
+    ["flemish", "Welgekomen"],
+    ["french", "Bienvenue"],
+    ["german", "Willkommen"],
+    ["irish", "Failte"],
+    ["italian", "Benvenuto"],
+    ["latvian", "Gaidits"],
+    ["lithuanian", "Laukiamas"],
+    ["polish", "Witamy"],
+    ["spanish", "Bienvenido"],
+    ["swedish", "Valkommen"],
+    ["welsh", "Croeso"],
+  ];
+
+  let lang = base.find(item => item[0] === language);
+  if(lang) {
+    return lang[1];
+  } else {
+    return "Welcome";
+  }
+}
+
+// ..................................................................................
+
+
