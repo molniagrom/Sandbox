@@ -745,7 +745,7 @@ function stringToArray(string) {
 
 function bonusTime(salary, bonus) {
   if (bonus === true) {
-    return "£" + (salary * 10);
+    return "£" + salary * 10;
   } else {
     return "£" + salary;
   }
@@ -759,13 +759,28 @@ function bonusTime(salary, bonus) {
 // Примечание: проверяются только строчные буквы английского языка.
 //В JavaScript есть способ получить числовое представление символа с помощью метода .charCodeAt()
 
-function position(letter){
-  let letterNum = (letter.charCodeAt() - 97) + 1;
+function position(letter) {
+  let letterNum = letter.charCodeAt() - 97 + 1;
   return `Position of alphabet: ${letterNum}`;
 }
 
 // .....................................................................................
 
+// Учитывая строку, необходимо вернуть строку, в которой каждый символ (с учетом регистра) повторяется один раз.
 
+// Примеры (Вход -> Выход):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+// function doubleChar(str) {
+//   let str2 = "";
+//   for (let i = 0; i < str.length; i++) {
+//     str2 += str[i] + str[i];
+//   }
+//   return str2;
+// }
+
+// .............................................................................................
 
 
