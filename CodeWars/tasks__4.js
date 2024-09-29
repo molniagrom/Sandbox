@@ -788,16 +788,40 @@ function position(letter) {
 // Пример
 // Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
 
-function pipeFix(numbers) {
-  let max = Math.max(...numbers);
-  let min = Math.min(...numbers);
+// function pipeFix(numbers) {
+//   let max = Math.max(...numbers);
+//   let min = Math.min(...numbers);
 
-  let fixedArray = [];
-  for (let i = min; i <= max; i++) {
-    fixedArray.push(i)
-  }
-return fixedArray;
-}
+//   let fixedArray = [];
+//   for (let i = min; i <= max; i++) {
+//     fixedArray.push(i);
+//   }
+//   return fixedArray;
+// }
 
 // .............................................................................................
 
+// Создайте метод, который позволит проверить, состоит ли строка ВСЕХ ЗАГЛАВНЫХ букв.
+
+// Примеры (вход -> выход)
+// "c" -> False
+// "C" -> True
+// "hello I AM DONALD" -> False
+// "HELLO I AM DONALD" -> True
+// "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+// "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+// В этом ката считается, что строка набрана ВСЕМИ ЗАГЛАВНЫМИ БУКВАМИ, если она не содержит ни одной строчной буквы, поэтому любая строка, не содержащая вообще ни одной буквы, тривиально считается набранной ВСЕМИ ЗАГЛАВНЫМИ БУКВАМИ.
+
+String.prototype.isUpperCase = function () {
+  if (this.length === 0) {
+    return true;
+  }
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] !== this[i].toUpperCase()) {
+      return false;
+    }
+  }
+  return true;
+};
+
+// .....................................................................................................
