@@ -812,16 +812,20 @@ function position(letter) {
 // "ACSKLDFJSGSKLDFJSKLDFJ" -> True
 // В этом ката считается, что строка набрана ВСЕМИ ЗАГЛАВНЫМИ БУКВАМИ, если она не содержит ни одной строчной буквы, поэтому любая строка, не содержащая вообще ни одной буквы, тривиально считается набранной ВСЕМИ ЗАГЛАВНЫМИ БУКВАМИ.
 
-String.prototype.isUpperCase = function () {
-  if (this.length === 0) {
-    return true;
-  }
-  for (let i = 0; i < this.length; i++) {
-    if (this[i] !== this[i].toUpperCase()) {
-      return false;
-    }
-  }
-  return true;
-};
+// String.prototype.isUpperCase = function () {
+//   if (this.length === 0) {
+//     return true;
+//   }
+//   for (let i = 0; i < this.length; i++) {
+//     if (this[i] !== this[i].toUpperCase()) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// ***
+// String.prototype.isUpperCase=function() {return this==this.toUpperCase()}
 
 // .....................................................................................................
+
