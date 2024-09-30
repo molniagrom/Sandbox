@@ -908,13 +908,12 @@ function plural(n) {
 // Молодежь до 21 года.
 // У взрослых их 21 и более.
 
-// Я НАПИСАЛА САМА СПЕРВОГО РАЗА!!!!!
 function peopleWithAgeDrink(old) {
-  if (old <= 14) {
+  if (old <= 13) {
     return "drink toddy";
-  } else if(old <= 18) {
+  } else if(old <= 17) {
     return "drink coke";
-  } else if(old <= 21) {
+  } else if(old >= 18 && old <= 20) {
     return "drink beer";
   } else if(old >= 21) {
     return "drink whisky";
