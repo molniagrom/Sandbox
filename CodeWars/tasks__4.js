@@ -591,9 +591,9 @@ function validatePIN(pin) {
 // Задача
 // Поскольку мы не можем определять ключевые слова в Javascript (ну, по крайней мере, я не знаю, как это сделать), ваша задача — определить функцию, xor(a, b)где aи b— два выражения, которые нужно оценить. Ваша xorфункция должна иметь поведение, описанное выше, возвращая , trueесли только одно из двух выражений оценивается как true , falseв противном случае.
 
-function xor(a, b) {
-  return a !== b;
-}
+// function xor(a, b) {
+//   return a !== b;
+// }
 // a !== b — Оператор строгого неравенства !== сравнивает два значения. Он возвращает true, если a и b имеют разные значения, и false, если они одинаковы.
 // ...................................................................
 
@@ -696,16 +696,16 @@ function xor(a, b) {
 // "Hello World" --> "World Hello"
 // "Hi There." --> "There. Hi"
 
-function reverse(string) {
-  // Удаляем лишние пробелы и разбиваем строку на слова
-  const words = string.trim().replace(/\s+/g, " ").split(" ");
+// function reverse(string) {
+//   // Удаляем лишние пробелы и разбиваем строку на слова
+//   const words = string.trim().replace(/\s+/g, " ").split(" ");
 
-  // Переворачиваем массив слов
-  const reversedWords = words.reverse();
+//   // Переворачиваем массив слов
+//   const reversedWords = words.reverse();
 
-  // Объединяем слова обратно в строку
-  return reversedWords.join(" ");
-}
+//   // Объединяем слова обратно в строку
+//   return reversedWords.join(" ");
+// }
 
 // .............................................................................
 
@@ -716,9 +716,9 @@ function reverse(string) {
 // "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 // Я сама написала
-function stringToArray(string) {
-  return string.split(" ");
-}
+// function stringToArray(string) {
+//   return string.split(" ");
+// }
 // ................................................................................................
 
 // Если в имени ровно 4 буквы, то это точно ваш друг! В противном случае, будьте уверены, это не...
@@ -839,44 +839,44 @@ function position(letter) {
 // IP_ADDRESS_NOT_FOUND - ip address not in the database
 // IP_ADDRESS_REQUIRED - no ip address was supplied
 
-function greet(language) {
-  let base = [
-    ["english", "Welcome"],
-    ["czech", "Vitejte"],
-    ["danish", "Velkomst"],
-    ["dutch", "Welkom"],
-    ["estonian", "Tere tulemast"],
-    ["finnish", "Tervetuloa"],
-    ["flemish", "Welgekomen"],
-    ["french", "Bienvenue"],
-    ["german", "Willkommen"],
-    ["irish", "Failte"],
-    ["italian", "Benvenuto"],
-    ["latvian", "Gaidits"],
-    ["lithuanian", "Laukiamas"],
-    ["polish", "Witamy"],
-    ["spanish", "Bienvenido"],
-    ["swedish", "Valkommen"],
-    ["welsh", "Croeso"],
-  ];
+// function greet(language) {
+//   let base = [
+//     ["english", "Welcome"],
+//     ["czech", "Vitejte"],
+//     ["danish", "Velkomst"],
+//     ["dutch", "Welkom"],
+//     ["estonian", "Tere tulemast"],
+//     ["finnish", "Tervetuloa"],
+//     ["flemish", "Welgekomen"],
+//     ["french", "Bienvenue"],
+//     ["german", "Willkommen"],
+//     ["irish", "Failte"],
+//     ["italian", "Benvenuto"],
+//     ["latvian", "Gaidits"],
+//     ["lithuanian", "Laukiamas"],
+//     ["polish", "Witamy"],
+//     ["spanish", "Bienvenido"],
+//     ["swedish", "Valkommen"],
+//     ["welsh", "Croeso"],
+//   ];
 
-  let lang = base.find((item) => item[0] === language);
-  if (lang) {
-    return lang[1];
-  } else {
-    return "Welcome";
-  }
-}
+//   let lang = base.find((item) => item[0] === language);
+//   if (lang) {
+//     return lang[1];
+//   } else {
+//     return "Welcome";
+//   }
+// }
 
 // ..................................................................................
 
 // Напишите функцию, которая всегда возвращает5
 // Звучит просто, не правда ли? Просто имейте в виду, что вы не можете использовать ни один из следующих символов:0123456789*+-/
 
-function unusualFive() {
-  let str = "abcde";
-  return str.length;
-}
+// function unusualFive() {
+//   let str = "abcde";
+//   return str.length;
+// }
 
 // .....................................................................................
 
@@ -885,13 +885,13 @@ function unusualFive() {
 // Все значения будут положительными целыми числами или числами с плавающей точкой, либо нулем.
 
 // Я НАПИСАЛА САМА СПЕРВОГО РАЗА!!!!!!
-function plural(n) {
-  if (n === 1) {
-    return false;
-  } else {
-    return true;
-  }
-}
+// function plural(n) {
+//   if (n === 1) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
 
 // .................................................................................................................................
 
@@ -908,18 +908,37 @@ function plural(n) {
 // Молодежь до 21 года.
 // У взрослых их 21 и более.
 
-function peopleWithAgeDrink(old) {
-  if (old <= 13) {
-    return "drink toddy";
-  } else if(old <= 17) {
-    return "drink coke";
-  } else if(old >= 18 && old <= 20) {
-    return "drink beer";
-  } else if(old >= 21) {
-    return "drink whisky";
-  }
-}
+// function peopleWithAgeDrink(old) {
+//   if (old <= 13) {
+//     return "drink toddy";
+//   } else if (old <= 17) {
+//     return "drink coke";
+//   } else if (old >= 18 && old <= 20) {
+//     return "drink beer";
+//   } else if (old >= 21) {
+//     return "drink whisky";
+//   }
+// }
 
 // ....................................................................................
 
+// Числа, заканчивающиеся на нули, скучны.
+// В вашем мире они могут быть забавными, но не здесь.
+// Избавьтесь от них. Оставьте только конечные.
+// 1450 -> 145
+// 960000 -> 96
+// 1050 -> 105
+// -1050 -> -105
 
+
+function noBoringZeros(n) {
+  if (n === 0) {
+    return 0;
+  }
+  let str = n.toString();
+  let strNew = str.replace(/0*$/, "");
+  let num = Number(strNew);
+  return strNew === "" ? 0 : Number(strNew);
+}
+
+// ............................................................................
