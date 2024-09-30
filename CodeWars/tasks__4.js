@@ -940,5 +940,31 @@ function noBoringZeros(n) {
   let num = Number(strNew);
   return strNew === "" ? 0 : Number(strNew);
 }
-
+// ***
+// function noBoringZeros(n) {
+//   while(n % 10 == 0 && n != 0) {
+//     n /= 10;
+//   }
+//   return n;
+// }
 // ............................................................................
+
+// Дополните решение так, чтобы оно перевернуло все слова в переданной строке.
+
+// Слова разделяются ровно одним пробелом, начальные и конечные пробелы отсутствуют.
+
+// Пример (Вход -> Выход):
+
+// "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+
+function reverseWords(str){
+  let words = str.split(' ');
+  let reverse = words.reverse();
+  let join = reverse.join(' ');
+  return join;
+}
+
+// ............................................................................................
+
+
