@@ -930,7 +930,6 @@ function position(letter) {
 // 1050 -> 105
 // -1050 -> -105
 
-
 function noBoringZeros(n) {
   if (n === 0) {
     return 0;
@@ -957,14 +956,37 @@ function noBoringZeros(n) {
 
 // "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
 
-
-function reverseWords(str){
-  let words = str.split(' ');
+function reverseWords(str) {
+  let words = str.split(" ");
   let reverse = words.reverse();
-  let join = reverse.join(' ');
+  let join = reverse.join(" ");
   return join;
 }
 
 // ............................................................................................
+
+// Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача — найти способ объединить их в один, отсортированный в порядке возрастания. Завершите функцию mergeArrays(arr1, arr2), где arr1 и arr2 — исходные отсортированные массивы.
+
+// Вам не нужно беспокоиться о проверке, так как arr1 и arr2 должны быть массивами с 0 или более целыми числами. Если оба arr1 и arr2 пусты, то просто верните пустой массив.
+
+// Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь одинаковые целые числа. Удалите дубликаты в возвращаемом результате.
+
+// Примеры (вход -> выход)
+// * [1, 2, 3, 4, 5], [6, 7, 8, 9, 10] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// * [1, 3, 5, 7, 9], [10, 8, 6, 4, 2] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
+
+
+// function mergeArrays(arr1, arr2) {
+//   const newArray = [].concat(arr1, arr2);
+//   let newSet = [...new Set(newArray)];
+//   newSet.sort((a, b) => a - b);
+//   return newSet;
+// }
+
+// .......................................................................................................
+
 
 
