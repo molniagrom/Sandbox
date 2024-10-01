@@ -988,5 +988,41 @@ function reverseWords(str) {
 
 // .......................................................................................................
 
+//Создайте функцию, которая всегда возвращает True/ trueдля каждого элемента в данном списке.
+// Однако, если элемент — это слово 'flick' , переключитесь на то, чтобы всегда возвращать противоположное логическое значение.
+
+// Примеры
+// ['codewars', 'flick', 'code', 'wars'] ➞ [True, False, False, False]
+
+// ['flick', 'chocolate', 'adventure', 'sunshine'] ➞ [False, False, False, False]
+
+// ['bicycle', 'jarmony', 'flick', 'sheep', 'flick'] ➞ [True, True, False, False, True]
+
+
+function flickSwitch(arr){
+  let result = [];
+  let bool = true;
+ 
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] === "flick") {
+      bool = !bool;
+      result[i] = bool;
+    } else {
+      result[i] = bool;
+    }
+  }
+  return result;
+}
+
+// ***
+
+// function flickSwitch(arr){
+//   let returning = true;
+//     return arr.map( (v) => {
+//       return (v === "flick") ? returning = !returning : returning;
+//     })
+// }
+
+// .........................................................................................
 
 
