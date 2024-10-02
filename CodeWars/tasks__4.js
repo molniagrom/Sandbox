@@ -1118,20 +1118,35 @@ function sameCase(a, b) {
 
 // Если сперматозоид содержит X-хромосому, вернуть «Поздравляем! У вас будет дочь». Если сперматозоид содержит Y-хромосому, вернуть «Поздравляем! У вас будет сын».
 
-function chromosomeCheck(sperm) {
-// Приводим sperm к верхнему регистру и убираем лишние пробелы
-  sperm = sperm.trim().toUpperCase();
+// function chromosomeCheck(sperm) {
+// // Приводим sperm к верхнему регистру и убираем лишние пробелы
+//   sperm = sperm.trim().toUpperCase();
 
-  // Проверяем, что sperm является корректной хромосомой
-  if (sperm === "X") {
-    return "Congratulations! You're going to have a daughter.";
-  } else if (sperm === "Y") {
-    return "Congratulations! You're going to have a son.";
-  } else {
-    return "Gender undetermined"; // На случай, если передано что-то другое
-  }
-}
+//   // Проверяем, что sperm является корректной хромосомой
+//   if (sperm === "X") {
+//     return "Congratulations! You're going to have a daughter.";
+//   } else if (sperm === "Y") {
+//     return "Congratulations! You're going to have a son.";
+//   } else {
+//     return "Gender undetermined"; // На случай, если передано что-то другое
+//   }
+// }
 
 // ...........................................................................................
 
+// Уберите восклицательный знак с конца строки. Для начинающего ката можно предположить, что входные данные всегда являются строкой, нет необходимости ее проверять.
+
+// Примеры
+// "Hi!"     ---> "Hi"
+// "Hi!!!"   ---> "Hi!!"
+// "!Hi"     ---> "!Hi"
+// "!Hi!"    ---> "!Hi"
+// "Hi! Hi!" ---> "Hi! Hi"
+// "Hi"      ---> "Hi"
+
+function remove (string) {
+  return string.replace(/!$/, '');
+}
+
+// ......................................................................................
 
