@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #header {
+    background-color: #45282e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  #nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #45282e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  #header-img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex; /* Using flexbox */
+    justify-content: center;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  #features, #video-section, #form-section {
+    margin: 30px;
+    padding: 20px;
+    background-color: #f3e0d2;
+  }
+  
+  iframe {
+    width: 100%;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="email"] {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  input[type="submit"] {
+    background-color: #45282e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #6b4f55;
+  }
+  
+  @media (max-width: 768px) {
+    #header-img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  
+    #form-section {
+      margin: 10px;
+      padding: 10px;
+    }
+  }

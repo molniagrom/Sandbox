@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Header section -->
+  <header id="header">
+    <nav id="nav-bar">
+      <img src="logo.png" id="header-img" alt="Product Logo">
+      <ul>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#video-section" class="nav-link">Video</a></li>
+        <li><a href="#form-section" class="nav-link">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Features section -->
+  <section id="features">
+    <h2>Product Features</h2>
+    <p>Explore the amazing features of our product.</p>
+  </section>
+
+  <!-- Video section -->
+  <section id="video-section">
+    <h2>Watch Our Product in Action</h2>
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=HT5qkhXk3sdvS3ct" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  </section>
+
+  <!-- Subscribe section with form -->
+  <section id="form-section">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+      <input name="email" type="email" id="email" placeholder="Enter your email" required>
+      <input type="submit" id="submit" value="Subscribe">
+    </form>
+  </section>
+</body>
+</html>
