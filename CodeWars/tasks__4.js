@@ -1092,7 +1092,12 @@ function setAlarm(employed, vacation) {
 // Ваша цель в этом ката — создать полный mouth_sizeметод, этот метод принимает один аргумент animal, который соответствует животному, с которым столкнулась лягушка. Если это alligator(нечувствительный к регистру) return, smallв противном случае return wide.
 
 function mouthSize(animal) {
-  if (animal === alligator) {
+  let alligator = "alligator";
+   let small  = "small";
+    let wide = "wide";
+  if (animal.toUpperCase() === alligator.toUpperCase()) {
+    return small;
+  } else {
     return wide;
   }
 }
