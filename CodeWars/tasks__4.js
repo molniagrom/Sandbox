@@ -978,7 +978,6 @@ function reverseWords(str) {
 
 // * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
 
-
 // function mergeArrays(arr1, arr2) {
 //   const newArray = [].concat(arr1, arr2);
 //   let newSet = [...new Set(newArray)];
@@ -998,13 +997,12 @@ function reverseWords(str) {
 
 // ['bicycle', 'jarmony', 'flick', 'sheep', 'flick'] ➞ [True, True, False, False, True]
 
-
-function flickSwitch(arr){
+function flickSwitch(arr) {
   let result = [];
   let bool = true;
- 
+
   for (let i = 0; i < arr.length; i++) {
-    if(arr[i] === "flick") {
+    if (arr[i] === "flick") {
       bool = !bool;
       result[i] = bool;
     } else {
@@ -1049,14 +1047,14 @@ function flickSwitch(arr){
 
 // '0'и '?'возвращается-1
 
-function sameCase(a, b){
+function sameCase(a, b) {
   if (!a.match(/[a-zA-Z]/) || !b.match(/[a-zA-Z]/)) {
     return -1;
-  } 
-  
-  if(a === a.toUpperCase() && b === b.toUpperCase()) {
+  }
+
+  if (a === a.toUpperCase() && b === b.toUpperCase()) {
     return 1;
-  } else if(a === a.toLowerCase() && b === b.toLowerCase()) {
+  } else if (a === a.toLowerCase() && b === b.toLowerCase()) {
     return 1;
   } else {
     return 0;
@@ -1069,14 +1067,14 @@ function sameCase(a, b){
 
 // Функция должна возвращать значение true, если вы работаете и не в отпуске (потому что это обстоятельства, при которых вам нужно установить будильник). В противном случае она должна возвращать значение false. Примеры:
 
-// employed | vacation 
+// employed | vacation
 // true     | true     => false
 // true     | false    => true
 // false    | true     => false
 // false    | false    => false
 
-function setAlarm(employed, vacation){
-  if(employed === true && vacation === false) {
+function setAlarm(employed, vacation) {
+  if (employed === true && vacation === false) {
     return true;
   } else {
     return false;
@@ -1085,20 +1083,20 @@ function setAlarm(employed, vacation){
 
 // ...................................................................................
 
+// Широкоротая лягушка особенно интересуется пищевыми привычками других существ.
 
+// Он просто не может перестать спрашивать у существ, с которыми сталкивается, что они любят есть. Но затем он встречает аллигатора, который просто ОБОЖАЕТ есть лягушек с широким ртом!
 
+// Когда он встречает аллигатора, тот делает крошечный рот.
 
+// Ваша цель в этом ката — создать полный mouth_sizeметод, этот метод принимает один аргумент animal, который соответствует животному, с которым столкнулась лягушка. Если это alligator(нечувствительный к регистру) return, smallв противном случае return wide.
 
+function mouthSize(animal) {
+  if (animal === alligator) {
+    return wide;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+// ....................................................................................
 
 
