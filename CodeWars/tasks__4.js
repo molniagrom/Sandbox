@@ -1073,13 +1073,13 @@ function sameCase(a, b) {
 // false    | true     => false
 // false    | false    => false
 
-function setAlarm(employed, vacation) {
-  if (employed === true && vacation === false) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function setAlarm(employed, vacation) {
+//   if (employed === true && vacation === false) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 // ...................................................................................
 
@@ -1091,17 +1091,47 @@ function setAlarm(employed, vacation) {
 
 // Ваша цель в этом ката — создать полный mouth_sizeметод, этот метод принимает один аргумент animal, который соответствует животному, с которым столкнулась лягушка. Если это alligator(нечувствительный к регистру) return, smallв противном случае return wide.
 
-function mouthSize(animal) {
-  let alligator = "alligator";
-   let small  = "small";
-    let wide = "wide";
-  if (animal.toUpperCase() === alligator.toUpperCase()) {
-    return small;
+// function mouthSize(animal) {
+//   let alligator = "alligator";
+//    let small  = "small";
+//     let wide = "wide";
+//   if (animal.toUpperCase() === alligator.toUpperCase()) {
+//     return small;
+//   } else {
+//     return wide;
+//   }
+// }
+
+// ***
+
+// function mouthSize(animal) {
+//   return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
+// }
+
+// ....................................................................................
+
+// Мужские гаметы или сперматозоиды у людей и других млекопитающих гетерогаметны и содержат один из двух типов половых хромосом. Это либо X, либо Y. Женские гаметы или яйцеклетки, однако, содержат только половую хромосому X и являются гомогаметными.
+
+// В этом случае пол особи определяется сперматозоидом. Если сперматозоид, содержащий X-хромосому, оплодотворяет яйцеклетку, то полученная зигота будет XX или женской. Если сперматозоид содержит Y-хромосому, то полученная зигота будет XY или мужской.
+
+// Определите, будет ли пол потомства мужским или женским, на основе хромосомы X или Y, присутствующей в сперме самца.
+
+// Если сперматозоид содержит X-хромосому, вернуть «Поздравляем! У вас будет дочь». Если сперматозоид содержит Y-хромосому, вернуть «Поздравляем! У вас будет сын».
+
+function chromosomeCheck(sperm) {
+// Приводим sperm к верхнему регистру и убираем лишние пробелы
+  sperm = sperm.trim().toUpperCase();
+
+  // Проверяем, что sperm является корректной хромосомой
+  if (sperm === "X") {
+    return "Congratulations! You're going to have a daughter.";
+  } else if (sperm === "Y") {
+    return "Congratulations! You're going to have a son.";
   } else {
-    return wide;
+    return "Gender undetermined"; // На случай, если передано что-то другое
   }
 }
 
-// ....................................................................................
+// ...........................................................................................
 
 
