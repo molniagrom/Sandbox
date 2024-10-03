@@ -1185,10 +1185,9 @@ function areYouPlayingBanjo(name) {
 
 // Числа с плавающей точкой, не равной нулю, считаются НЕчетными для этого ката.
 
-
-function testEven(n) {
-  return n % 2 === 0;
-}
+// function testEven(n) {
+//   return n % 2 === 0;
+// }
 
 // ..............................................................................................
 
@@ -1199,9 +1198,17 @@ function testEven(n) {
 // Если Алекс наберет 10 или более обручей, верните веревку "Great, now move on to tricks".
 // Если он не набрал 10 обручей, верните веревку "Keep at it until you get it".
 
-function hoopCount (n) {
-  return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
-}
+// function hoopCount (n) {
+//   return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
+// }
 
 // .........................................................................................
+
+// Завершите функцию, которая преобразует двоичное число (заданное в виде строки) в десятичное число.
+
+// function binToDec(bin) {
+//   return parseInt(bin, 2);
+// }
+
+// .........................................................................................................
 
