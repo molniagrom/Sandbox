@@ -1144,8 +1144,8 @@ function sameCase(a, b) {
 // "Hi! Hi!" ---> "Hi! Hi"
 // "Hi"      ---> "Hi"
 
-function remove (string) {
-  return string.replace(/!$/, '');
+function remove(string) {
+  return string.replace(/!$/, "");
 }
 
 // ......................................................................................
@@ -1155,7 +1155,7 @@ function remove (string) {
 
 // Функция принимает имя в качестве единственного аргумента и возвращает одну из следующих строк:
 
-// name + " plays banjo" 
+// name + " plays banjo"
 // name + " does not play banjo"
 // Указанные имена всегда являются допустимыми строками.
 
@@ -1163,10 +1163,32 @@ function remove (string) {
 function areYouPlayingBanjo(name) {
   let r = "R";
 
-return name.toLowerCase().startsWith(r.toLowerCase()) ? name + " plays banjo" : name + " does not play banjo";
+  return name.toLowerCase().startsWith(r.toLowerCase())
+    ? name + " plays banjo"
+    : name + " does not play banjo";
   // if (name.toLowerCase().startsWith(r.toLowerCase())) {
   //   return name + " plays banjo";
   // } else{
   //   return name + " does not play banjo";
   // }
 }
+
+// ................................................................................................
+
+// В этом ката мы передаем число (n) в функцию.
+
+// Ваш код определит, является ли переданное число четным (или нет).
+
+// Функция должна возвращать либо значение true, либо значение false.
+
+// Числа могут быть положительными или отрицательными, целыми или числами с плавающей точкой.
+
+// Числа с плавающей точкой, не равной нулю, считаются НЕчетными для этого ката.
+
+
+function testEven(n) {
+  return n % 2 === 0;
+}
+
+// ..............................................................................................
+
