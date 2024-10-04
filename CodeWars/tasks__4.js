@@ -1252,24 +1252,38 @@ function areYouPlayingBanjo(name) {
 // Пример
 // Для ввода [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]следует вернуть [10, -65].
 
-function countPositivesSumNegatives(input) {
-  if (input === null || input.length === 0) {
-    return [];
-  }
+// function countPositivesSumNegatives(input) {
+//   if (input === null || input.length === 0) {
+//     return [];
+//   }
 
-  let sumOfPositive = 0;
-  let sumOfNegative = 0;
-  let result = [];
-  input.forEach((element) => {
-    if (element > 0) {
-      sumOfPositive++;
-    } else if (element < 0) {
-      sumOfNegative += element;
-    }
+//   let sumOfPositive = 0;
+//   let sumOfNegative = 0;
+//   let result = [];
+//   input.forEach((element) => {
+//     if (element > 0) {
+//       sumOfPositive++;
+//     } else if (element < 0) {
+//       sumOfNegative += element;
+//     }
+//   });
+//   result.push(sumOfPositive, sumOfNegative);
+//   return result;
+// }
+
+// ................................................................................................
+
+// Дополните функцию квадратной суммы так, чтобы она возводила в квадрат каждое переданное ей число, а затем суммировала результаты.
+
+// Я САМА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function squareSum(numbers) {
+  let result = 0;
+  numbers.forEach((element) => {
+   let sumSquared = element * element;
+   result += sumSquared;
   });
-  result.push(sumOfPositive, sumOfNegative);
   return result;
 }
 
-// ................................................................................................
+// ......................................................................................................
 
