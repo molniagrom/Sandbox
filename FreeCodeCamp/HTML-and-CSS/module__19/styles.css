@@ -58,11 +58,7 @@ body {
 .penguin-head {
   width: 50%;
   height: 45%;
-  background: linear-gradient(
-    45deg,
-    gray,
-    rgb(239, 240, 228)
-  );
+  background: linear-gradient(45deg, gray, rgb(239, 240, 228));
   border-radius: 70% 70% 65% 65%;
   top: 10%;
   left: 25%;
@@ -123,7 +119,17 @@ body {
   width: 15%;
   height: 10%;
   background-color: pink;
+  position: absolute;
+  top: 65%;
+  border-radius: 50%;
+}
 
+.blush.left {
+  left: 15%;
+}
+
+.blush.right {
+  right: 15%;
 }
 
 .penguin-body {
@@ -159,4 +165,11 @@ body {
   z-index: 3;
   position: absolute;
   margin-top: -58px;
+}
+
+.beak {
+height: 10%;
+background-color: orange;
+border-radius: 50%;
+
 }
