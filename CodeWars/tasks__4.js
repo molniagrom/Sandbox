@@ -1382,8 +1382,23 @@ function sumMix(x) {
 // ***
 
 function sumMix(x) {
-  return x.map(a => +a).reduce((a, b) => a + b);
+  return x.map((a) => +a).reduce((a, b) => a + b);
 }
 
 // ...................................................................................
+
+// Найти среднее значение
+
+function findAverage(array) {
+  let sum = 0;
+  array.length === 0
+    ? 0
+    : array.forEach((element) => {
+        sum += element;
+      });
+  let average = sum / array.length;
+  return average;
+}
+
+// ..................................................................................
 
