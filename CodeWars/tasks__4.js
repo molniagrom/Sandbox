@@ -1362,43 +1362,60 @@ function sayHello(name, city, state) {
 // 'This looks5 grea8t!' -> 'This looks great!'
 // Ваши измотанные коллеги ждут от вас решения, как взять этот искаженный текст и удалить все цифры. Ваша программа возьмет строку и очистит все числовые символы, а затем вернет строку с пробелами и специальными символами, ~#$%^&!@*():;"'.,?которые останутся нетронутыми
 
-function stringClean(s) {
-  return s.replace("/d/g", "");
-}
+// function stringClean(s) {
+//   return s.replace("/d/g", "");
+// }
 
 // ..........................................................................................
 
 // Дан массив целых чисел в виде строк и чисел, вернуть сумму значений массива, как если бы все они были числами.
 // Ответ дайте в виде числа.
 
-function sumMix(x) {
-  let sum = 0;
-  x.forEach((element) => {
-    sum += Number(element);
-  });
-  return sum;
-}
+// function sumMix(x) {
+//   let sum = 0;
+//   x.forEach((element) => {
+//     sum += Number(element);
+//   });
+//   return sum;
+// }
 
 // ***
 
-function sumMix(x) {
-  return x.map((a) => +a).reduce((a, b) => a + b);
-}
+// function sumMix(x) {
+//   return x.map((a) => +a).reduce((a, b) => a + b);
+// }
 
 // ...................................................................................
 
 // Найти среднее значение
 
-function findAverage(array) {
-  let sum = 0;
-  array.length === 0
-    ? 0
-    : array.forEach((element) => {
-        sum += element;
-      });
-  let average = sum / array.length;
-  return average;
-}
+// function findAverage(array) {
+//   let sum = 0;
+//   array.length === 0
+//     ? 0
+//     : array.forEach((element) => {
+//         sum += element;
+//       });
+//   let average = sum / array.length;
+//   return average;
+// }
+// // ***
+// const findAverage = nums => nums.reduce((a, b) => a + b) / nums.length;
 
 // ..................................................................................
+
+// У вас есть отмеченный наградами сад, и каждый день растениям нужно ровно 40 мм воды. Вы создали отличный фрагмент JavaScript для расчета количества воды, необходимого вашим растениям, приняв во внимание прогнозируемое на день количество дождевой воды. Ваш завистливый сосед взломал ваш компьютер и наполнил ваш код ошибками.
+// Ваша задача — отладить код, прежде чем ваши растения погибнут!
+
+function rainAmount(mm) {
+  if (mm === 40) {
+    return "Your plant has had more than enough water for today!";
+  } else if (mm < 40) {
+    return `You need to give your plant ${40 - mm}mm of water`;
+  } else {
+    return "Your plant has had more than enough water for today!";
+  }
+}
+
+// ..............................................................................................
 
