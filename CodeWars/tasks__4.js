@@ -1491,9 +1491,28 @@ function validatePIN(pin) {
 
 // Выведи результат в консоль, чтобы все видели, кто на стороне силы!
 
-const decepticons = ["Мегатрон", "Звёздный Крик", "Звуковая Волна"];
-const numberedDecepticons = decepticons.map((decepticon) => `Делегат: ${decepticon}`)
-console.log(numberedDecepticons);
+// const decepticons = ["Мегатрон", "Звёздный Крик", "Звуковая Волна"];
+// const numberedDecepticons = decepticons.map((decepticon) => `Делегат: ${decepticon}`)
+// console.log(numberedDecepticons);
 
 // ......................................................................................................
+
+// У нас есть массив объектов, каждый из которых представляет Десептикона с его именем и силой.
+
+const decepticons = [
+  { name: "Мегатрон", strength: 100 },
+  { name: "Звёздный Крик", strength: 80 },
+  { name: "Звуковая Волна", strength: 90 },
+  { name: "Трансформатор", strength: 60 }
+];
+// Используя метод map, создайте новый массив, который будет содержать строки формата: "Имя: Имя, Сила: Сила".
+// Затем, используя метод filter, отфильтруйте Десептиконов, у которых сила больше 70.
+// В итоге выведите оба массива в консоль: преобразованный массив и отфильтрованный массив.
+
+let formattedDecepticons = decepticons.map((decepticon) => `Имя ${decepticon.name}, Сила: ${decepticon.strength}`)
+let strongDecepticons = decepticons.filter((decepticon) => decepticon.strength > 70)
+console.log(formattedDecepticons, strongDecepticons);
+
+// .......................................................................................................
+
 
