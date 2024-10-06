@@ -1499,20 +1499,51 @@ function validatePIN(pin) {
 
 // У нас есть массив объектов, каждый из которых представляет Десептикона с его именем и силой.
 
-const decepticons = [
-  { name: "Мегатрон", strength: 100 },
-  { name: "Звёздный Крик", strength: 80 },
-  { name: "Звуковая Волна", strength: 90 },
-  { name: "Трансформатор", strength: 60 }
-];
+// const decepticons = [
+//   { name: "Мегатрон", strength: 100 },
+//   { name: "Звёздный Крик", strength: 80 },
+//   { name: "Звуковая Волна", strength: 90 },
+//   { name: "Трансформатор", strength: 60 }
+// ];
 // Используя метод map, создайте новый массив, который будет содержать строки формата: "Имя: Имя, Сила: Сила".
 // Затем, используя метод filter, отфильтруйте Десептиконов, у которых сила больше 70.
 // В итоге выведите оба массива в консоль: преобразованный массив и отфильтрованный массив.
 
-let formattedDecepticons = decepticons.map((decepticon) => `Имя ${decepticon.name}, Сила: ${decepticon.strength}`)
-let strongDecepticons = decepticons.filter((decepticon) => decepticon.strength > 70)
-console.log(formattedDecepticons, strongDecepticons);
+// let formattedDecepticons = decepticons.map((decepticon) => `Имя ${decepticon.name}, Сила: ${decepticon.strength}`)
+// let strongDecepticons = decepticons.filter((decepticon) => decepticon.strength > 70)
+// console.log(formattedDecepticons, strongDecepticons);
 
 // .......................................................................................................
 
+// Преобразование: Используй метод map, чтобы создать новый массив строк, где каждая строка будет содержать информацию о автоботе в формате:
+// "Имя: [имя], Уровень силы: [уровень], Союз: [союз]".
+// Фильтрация: Используй метод filter, чтобы создать новый массив только для автоботов из альянса "Автоботы", у которых уровень силы больше 50.
+// Сортировка: Используй метод sort, чтобы отсортировать отфильтрованный массив автоботов по их уровню силы в порядке убывания.
 
+// const autobots = [
+//   { name: "Оптимус Прайм", powerLevel: 100, alliance: "Автоботы" },
+//   { name: "Бамблби", powerLevel: 70, alliance: "Автоботы" },
+//   { name: "Рэтчет", powerLevel: 80, alliance: "Автоботы" },
+//   { name: "Мегатрон", powerLevel: 90, alliance: "Десептиконы" },
+//   { name: "Звёздный Крик", powerLevel: 60, alliance: "Десептиконы" },
+// ];
+
+// let conversion = autobots.map((autobot) => `Имя: ${autobot.name}, Уровень силы: ${autobot.powerLevel}, Союз: ${autobot.alliance}`)
+// let filter = autobots.filter((autobot) => autobot.powerLevel > 50 && autobot.alliance === "Автоботы")
+// let sort = filter.sort((a, b) => b.powerLevel - a.powerLevel);
+
+// console.log(sort);
+
+// .........................................................................................................
+
+// Определите функцию, которая удаляет дубликаты из массива неотрицательных чисел и возвращает их в качестве результата.
+// Порядок последовательности должен оставаться прежним.
+
+function distinct(a) {
+ let uniqueArray = a.filter(function(item, pos) {
+    return a.indexOf(item) == pos;
+})
+return uniqueArray;
+}
+
+// ......................................................................................................
