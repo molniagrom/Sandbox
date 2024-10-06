@@ -1421,11 +1421,11 @@ function rainAmount(mm) {
 
 // Создайте функцию, которая возвращает значение, умноженное на 50 и увеличенное на 6. Если введенное значение является строкой, она должна вернуть «Ошибка».
 
-function problem(x){
-  if (typeof(x) === 'string') {
+function problem(x) {
+  if (typeof x === "string") {
     return "Error";
   } else {
-    return ((x * 50) + 6);
+    return x * 50 + 6;
   }
 }
 
@@ -1449,3 +1449,6 @@ function howManyLightsabersDoYouOwn(name) {
 
 // .........................................................................................
 
+function calculateAge() {
+  
+}
