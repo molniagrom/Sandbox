@@ -743,13 +743,13 @@ function validatePIN(pin) {
 // Если бонус — правда, зарплату следует умножить на 10. Если бонус — ложь, то толстосум не заработал достаточно денег и должен получить только свою заявленную зарплату.
 // Возвращает общую сумму, которую получит пользователь, в виде строки с префиксом «£» (= "\u00A3", JS, Go, Java, Scala и Julia), «$» (C#, C++, Dart, Ruby, Clojure, Elixir, PHP, Python, Haskell и Lua) или «¥» (Rust).
 
-function bonusTime(salary, bonus) {
-  if (bonus === true) {
-    return "£" + salary * 10;
-  } else {
-    return "£" + salary;
-  }
-}
+// function bonusTime(salary, bonus) {
+//   if (bonus === true) {
+//     return "£" + salary * 10;
+//   } else {
+//     return "£" + salary;
+//   }
+// }
 
 // .................................................................................................
 
@@ -759,10 +759,10 @@ function bonusTime(salary, bonus) {
 // Примечание: проверяются только строчные буквы английского языка.
 //В JavaScript есть способ получить числовое представление символа с помощью метода .charCodeAt()
 
-function position(letter) {
-  let letterNum = letter.charCodeAt() - 97 + 1;
-  return `Position of alphabet: ${letterNum}`;
-}
+// function position(letter) {
+//   let letterNum = letter.charCodeAt() - 97 + 1;
+//   return `Position of alphabet: ${letterNum}`;
+// }
 
 // .....................................................................................
 
@@ -930,15 +930,15 @@ function position(letter) {
 // 1050 -> 105
 // -1050 -> -105
 
-function noBoringZeros(n) {
-  if (n === 0) {
-    return 0;
-  }
-  let str = n.toString();
-  let strNew = str.replace(/0*$/, "");
-  let num = Number(strNew);
-  return strNew === "" ? 0 : Number(strNew);
-}
+// function noBoringZeros(n) {
+//   if (n === 0) {
+//     return 0;
+//   }
+//   let str = n.toString();
+//   let strNew = str.replace(/0*$/, "");
+//   let num = Number(strNew);
+//   return strNew === "" ? 0 : Number(strNew);
+// }
 // ***
 // function noBoringZeros(n) {
 //   while(n % 10 == 0 && n != 0) {
@@ -956,12 +956,12 @@ function noBoringZeros(n) {
 
 // "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
 
-function reverseWords(str) {
-  let words = str.split(" ");
-  let reverse = words.reverse();
-  let join = reverse.join(" ");
-  return join;
-}
+// function reverseWords(str) {
+//   let words = str.split(" ");
+//   let reverse = words.reverse();
+//   let join = reverse.join(" ");
+//   return join;
+// }
 
 // ............................................................................................
 
@@ -997,20 +997,20 @@ function reverseWords(str) {
 
 // ['bicycle', 'jarmony', 'flick', 'sheep', 'flick'] ➞ [True, True, False, False, True]
 
-function flickSwitch(arr) {
-  let result = [];
-  let bool = true;
+// function flickSwitch(arr) {
+//   let result = [];
+//   let bool = true;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === "flick") {
-      bool = !bool;
-      result[i] = bool;
-    } else {
-      result[i] = bool;
-    }
-  }
-  return result;
-}
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === "flick") {
+//       bool = !bool;
+//       result[i] = bool;
+//     } else {
+//       result[i] = bool;
+//     }
+//   }
+//   return result;
+// }
 
 // ***
 
@@ -1047,19 +1047,19 @@ function flickSwitch(arr) {
 
 // '0'и '?'возвращается-1
 
-function sameCase(a, b) {
-  if (!a.match(/[a-zA-Z]/) || !b.match(/[a-zA-Z]/)) {
-    return -1;
-  }
+// function sameCase(a, b) {
+//   if (!a.match(/[a-zA-Z]/) || !b.match(/[a-zA-Z]/)) {
+//     return -1;
+//   }
 
-  if (a === a.toUpperCase() && b === b.toUpperCase()) {
-    return 1;
-  } else if (a === a.toLowerCase() && b === b.toLowerCase()) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
+//   if (a === a.toUpperCase() && b === b.toUpperCase()) {
+//     return 1;
+//   } else if (a === a.toLowerCase() && b === b.toLowerCase()) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// }
 
 // ............................................................................
 
@@ -1144,9 +1144,9 @@ function sameCase(a, b) {
 // "Hi! Hi!" ---> "Hi! Hi"
 // "Hi"      ---> "Hi"
 
-function remove(string) {
-  return string.replace(/!$/, "");
-}
+// function remove(string) {
+//   return string.replace(/!$/, "");
+// }
 
 // ......................................................................................
 
@@ -1160,18 +1160,18 @@ function remove(string) {
 // Указанные имена всегда являются допустимыми строками.
 
 // Я САМА!!!!!!!!!!!!!!!!!!!!!!!!!
-function areYouPlayingBanjo(name) {
-  let r = "R";
+// function areYouPlayingBanjo(name) {
+//   let r = "R";
 
-  return name.toLowerCase().startsWith(r.toLowerCase())
-    ? name + " plays banjo"
-    : name + " does not play banjo";
-  // if (name.toLowerCase().startsWith(r.toLowerCase())) {
-  //   return name + " plays banjo";
-  // } else{
-  //   return name + " does not play banjo";
-  // }
-}
+//   return name.toLowerCase().startsWith(r.toLowerCase())
+//     ? name + " plays banjo"
+//     : name + " does not play banjo";
+//   // if (name.toLowerCase().startsWith(r.toLowerCase())) {
+//   //   return name + " plays banjo";
+//   // } else{
+//   //   return name + " does not play banjo";
+//   // }
+// }
 
 // ................................................................................................
 
@@ -1276,14 +1276,14 @@ function areYouPlayingBanjo(name) {
 // Дополните функцию квадратной суммы так, чтобы она возводила в квадрат каждое переданное ей число, а затем суммировала результаты.
 
 // Я САМА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-function squareSum(numbers) {
-  let result = 0;
-  numbers.forEach((element) => {
-    let sumSquared = element * element;
-    result += sumSquared;
-  });
-  return result;
-}
+// function squareSum(numbers) {
+//   let result = 0;
+//   numbers.forEach((element) => {
+//     let sumSquared = element * element;
+//     result += sumSquared;
+//   });
+//   return result;
+// }
 
 // ......................................................................................................
 
@@ -1301,15 +1301,15 @@ function squareSum(numbers) {
 // input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
-function openOrSenior(data) {
-  return data.map((element) => {
-    if (element[0] >= 55 && element[1] > 7) {
-      return "Senior";
-    } else {
-      return "Open";
-    }
-  });
-}
+// function openOrSenior(data) {
+//   return data.map((element) => {
+//     if (element[0] >= 55 && element[1] > 7) {
+//       return "Senior";
+//     } else {
+//       return "Open";
+//     }
+//   });
+// }
 
 // ....................................................................................................
 
@@ -1323,20 +1323,20 @@ function openOrSenior(data) {
 
 // Все входные данные будут целыми числами. Верните целое число. Округлите в меньшую сторону.
 
-function dutyFree(normPrice, discount, hol) {
-  let economy = normPrice * (discount / 100);
-  let numberOfBottles = Math.floor(hol / economy);
-  return numberOfBottles;
-}
+// function dutyFree(normPrice, discount, hol) {
+//   let economy = normPrice * (discount / 100);
+//   let numberOfBottles = Math.floor(hol / economy);
+//   return numberOfBottles;
+// }
 
 // ...........................................................................................
 
 // Grasshopper — отладка синтаксиса функций
 // Студент работал над функцией и допустил несколько синтаксических ошибок при кодировании. Помогите им найти свои ошибки и исправить их.
 
-function main(verb, noun) {
-  return verb + noun;
-}
+// function main(verb, noun) {
+//   return verb + noun;
+// }
 
 // ...............................................................................
 
@@ -1347,10 +1347,10 @@ function main(verb, noun) {
 // ['John', 'Smith'], 'Phoenix', 'Arizona'
 // Этот пример вернет строкуHello, John Smith! Welcome to Phoenix, Arizona!
 
-function sayHello(name, city, state) {
-  // console.log(`Hello, ${name[0]} ${name[1]}! Welcome to ${city}, ${state}`)
-  return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
-}
+// function sayHello(name, city, state) {
+//   // console.log(`Hello, ${name[0]} ${name[1]}! Welcome to ${city}, ${state}`)
+//   return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
+// }
 
 // ..............................................................................
 
@@ -1407,27 +1407,27 @@ function sayHello(name, city, state) {
 // У вас есть отмеченный наградами сад, и каждый день растениям нужно ровно 40 мм воды. Вы создали отличный фрагмент JavaScript для расчета количества воды, необходимого вашим растениям, приняв во внимание прогнозируемое на день количество дождевой воды. Ваш завистливый сосед взломал ваш компьютер и наполнил ваш код ошибками.
 // Ваша задача — отладить код, прежде чем ваши растения погибнут!
 
-function rainAmount(mm) {
-  if (mm === 40) {
-    return "Your plant has had more than enough water for today!";
-  } else if (mm < 40) {
-    return `You need to give your plant ${40 - mm}mm of water`;
-  } else {
-    return "Your plant has had more than enough water for today!";
-  }
-}
+// function rainAmount(mm) {
+//   if (mm === 40) {
+//     return "Your plant has had more than enough water for today!";
+//   } else if (mm < 40) {
+//     return `You need to give your plant ${40 - mm}mm of water`;
+//   } else {
+//     return "Your plant has had more than enough water for today!";
+//   }
+// }
 
 // ..............................................................................................
 
 // Создайте функцию, которая возвращает значение, умноженное на 50 и увеличенное на 6. Если введенное значение является строкой, она должна вернуть «Ошибка».
 
-function problem(x) {
-  if (typeof x === "string") {
-    return "Error";
-  } else {
-    return x * 50 + 6;
-  }
-}
+// function problem(x) {
+//   if (typeof x === "string") {
+//     return "Error";
+//   } else {
+//     return x * 50 + 6;
+//   }
+// }
 
 // .............................................................................................
 
@@ -1443,12 +1443,38 @@ function problem(x) {
 // "anyone else" --> 0
 // "Zach" --> 18
 
-function howManyLightsabersDoYouOwn(name) {
-  return name === "Zach" ? 18 : 0;
-}
+// function howManyLightsabersDoYouOwn(name) {
+//   return name === "Zach" ? 18 : 0;
+// }
 
 // .........................................................................................
 
-function calculateAge() {
-  
-}
+// Филиппу только что исполнилось четыре года, и он хочет узнать, сколько ему будет лет через несколько лет в будущем, например, в 2090 или 3044 году. Его родители не справляются с вычислениями, поэтому они просят вас помочь им, написав программу, которая сможет ответить на бесконечные вопросы Филиппа.
+
+// Ваша задача — написать функцию, которая принимает два параметра: год рождения и год, относительно которого нужно подсчитать годы. Поскольку Филипп становится все более любопытным с каждым днем, он вскоре может захотеть узнать, сколько лет осталось до его рождения, поэтому ваша функция должна работать как с будущими, так и с прошлыми датами.
+
+// Предоставьте вывод в следующем формате: Для дат в будущем: «Вам ... лет». Для дат в прошлом: «Вы родитесь в ... году». Если год рождения совпадает с запрошенным годом, верните: «Вы родились в этом самом году!»
+
+// "..." следует заменить числом, за которым следует один пробел. Помните, что вам нужно учитывать и "год", и "годы", в зависимости от результата.
+
+
+// function calculateAge(yearOfBirth, referenceНear) {
+//   if (referenceНear === yearOfBirth) {
+//     return "You were born this very year!";
+//   } else if (yearOfBirth < referenceНear) {
+//     if (referenceНear - yearOfBirth === 1) {
+//       return `You are ${referenceНear - yearOfBirth} year old.`;
+//     } else {
+//       return `You are ${referenceНear - yearOfBirth} years old.`;
+//     }
+//   } else if (yearOfBirth > referenceНear) {
+//     if (yearOfBirth - referenceНear === 1) {
+//       return `You will be born in ${yearOfBirth - referenceНear} year.`;
+//     } else {
+//       return `You will be born in ${yearOfBirth - referenceНear} years.`;
+//     }
+//   }
+// }
+
+//...................................................................................................
+
