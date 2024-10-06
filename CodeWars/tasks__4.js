@@ -1539,11 +1539,14 @@ function validatePIN(pin) {
 // Определите функцию, которая удаляет дубликаты из массива неотрицательных чисел и возвращает их в качестве результата.
 // Порядок последовательности должен оставаться прежним.
 
-function distinct(a) {
- let uniqueArray = a.filter(function(item, pos) {
-    return a.indexOf(item) == pos;
-})
-return uniqueArray;
-}
-
+// function distinct(a) {
+//  let uniqueArray = a.filter(function(item, pos) {
+//     return a.indexOf(item) == pos;
+// })
+// return uniqueArray;
+// }
+// ***
+// function distinct(a) {
+//   return [...new Set(a)];
+// }
 // ......................................................................................................
