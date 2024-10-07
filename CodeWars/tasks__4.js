@@ -1457,7 +1457,6 @@ function validatePIN(pin) {
 
 // "..." следует заменить числом, за которым следует один пробел. Помните, что вам нужно учитывать и "год", и "годы", в зависимости от результата.
 
-
 // function calculateAge(yearOfBirth, referenceНear) {
 //   if (referenceНear === yearOfBirth) {
 //     return "You were born this very year!";
@@ -1550,3 +1549,22 @@ function validatePIN(pin) {
 //   return [...new Set(a)];
 // }
 // ......................................................................................................
+
+// Определите метод hello, который выводит returnsсообщение «Hello, Name!» для заданного name, или выводит сообщение «Hello, World!», если имя не указано (или передано как пустая строка).
+// Предположим, что nameэто String, и он проверяет наличие опечаток у пользователя, чтобы вернуть имя с первой заглавной буквой (Xxxx).
+
+function hello(name) {
+  let rename;
+  if (name) {
+    rename = name.toLowerCase();
+  }
+  if (rename) {
+    return `Hello, ${rename.charAt(0).toUpperCase() + rename.slice(1)}!`;
+  } else {
+    return `Hello, World!`;
+  }
+}
+
+// ...........................................................................................
+
+
