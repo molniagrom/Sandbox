@@ -1597,3 +1597,14 @@ function remainder(a, b) {
 
 // ...........................................................................................
 
+// Ваша задача проста: если xквадрат больше 1000, вернуть It's hotter than the sun!!, иначе вернутьHelp yourself to a honeycomb Yorkie for the glovebox.
+
+function apple(x){
+  if ((x ** 2) > 1000) {
+    return "It's hotter than the sun!!";
+  } else {
+    return "Help yourself to a honeycomb Yorkie for the glovebox.";
+  }
+}
+// ........................................................................
+
