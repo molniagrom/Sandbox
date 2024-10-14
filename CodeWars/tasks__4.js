@@ -305,21 +305,21 @@
 
 // ***
 
-function validatePIN(pin) {
-  // Проверяем длину PIN-кода
-  if (pin.length !== 4 && pin.length !== 6) {
-    return false;
-  }
+// function validatePIN(pin) {
+//   // Проверяем длину PIN-кода
+//   if (pin.length !== 4 && pin.length !== 6) {
+//     return false;
+//   }
 
-  // Проверяем, что все символы являются цифрами
-  for (let i = 0; i < pin.length; i++) {
-    if (pin[i] < "0" || pin[i] > "9") {
-      return false;
-    }
-  }
+//   // Проверяем, что все символы являются цифрами
+//   for (let i = 0; i < pin.length; i++) {
+//     if (pin[i] < "0" || pin[i] > "9") {
+//       return false;
+//     }
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
 // ......................................................................................................................
 
@@ -1553,20 +1553,20 @@ function validatePIN(pin) {
 // Определите метод hello, который выводит returnsсообщение «Hello, Name!» для заданного name, или выводит сообщение «Hello, World!», если имя не указано (или передано как пустая строка).
 // Предположим, что nameэто String, и он проверяет наличие опечаток у пользователя, чтобы вернуть имя с первой заглавной буквой (Xxxx).
 
-function hello(name) {
-  let rename;
-  if (name) {
-    rename = name.toLowerCase();
-  }
-  if (rename) {
-    return `Hello, ${rename.charAt(0).toUpperCase() + rename.slice(1)}!`;
-  } else {
-    return `Hello, World!`;
-  }
-}
-// ***
-const hello = (s) =>
-  `Hello, ${s ? s[0].toUpperCase() + s.slice(1).toLowerCase() : "World"}!`;
+// function hello(name) {
+//   let rename;
+//   if (name) {
+//     rename = name.toLowerCase();
+//   }
+//   if (rename) {
+//     return `Hello, ${rename.charAt(0).toUpperCase() + rename.slice(1)}!`;
+//   } else {
+//     return `Hello, World!`;
+//   }
+// }
+// // ***
+// const hello = (s) =>
+//   `Hello, ${s ? s[0].toUpperCase() + s.slice(1).toLowerCase() : "World"}!`;
 
 // ...........................................................................................
 
@@ -1590,42 +1590,42 @@ const hello = (s) =>
 // n = 0
 // m = 1
 
-function remainder(a, b) {
-  return a > b ? a % b : b % a;
-}
+// function remainder(a, b) {
+//   return a > b ? a % b : b % a;
+// }
 
 // ...........................................................................................
 
 // Ваша задача проста: если xквадрат больше 1000, вернуть It's hotter than the sun!!, иначе вернутьHelp yourself to a honeycomb Yorkie for the glovebox.
 
-function apple(x) {
-  if (x ** 2 > 1000) {
-    return "It's hotter than the sun!!";
-  } else {
-    return "Help yourself to a honeycomb Yorkie for the glovebox.";
-  }
-}
+// function apple(x) {
+//   if (x ** 2 > 1000) {
+//     return "It's hotter than the sun!!";
+//   } else {
+//     return "Help yourself to a honeycomb Yorkie for the glovebox.";
+//   }
+// }
 // ........................................................................
 
 // Принимает строку. Сделать только первые буквы заглавными. Вернуть строку с каждым словом с заглавной буквы
 
-String.prototype.toJadenCase = function () {
-  return this.split(" ")
-    .map((a) => a.charAt(0).toUpperCase() + a.slice(1))
-    .join(" ");
-};
+// String.prototype.toJadenCase = function () {
+//   return this.split(" ")
+//     .map((a) => a.charAt(0).toUpperCase() + a.slice(1))
+//     .join(" ");
+// };
 
 // .......................................................................................
 
 // В этой игре герой ходит слева направо. Игрок бросает кубик и делает ход на указанное кубиком количество делений два раза .
 // Создайте функцию для терминальной игры, которая берет текущую позицию героя и бросок (1-6) и возвращает новую позицию.
 
-function move (position, roll) {
-  return position + (roll * 2);
-}
+// function move (position, roll) {
+//   return position + (roll * 2);
+// }
 
-// ***
-const move = (p, r) => p + (r * 2);
+// // ***
+// const move = (p, r) => p + (r * 2);
 
 // ...................................................................................................
 
@@ -1639,10 +1639,10 @@ const move = (p, r) => p + (r * 2);
 // ball1.ballType     //=> "regular"
 // ball2.ballType     //=> "super"
 
-var Ball = function(ballType) {
-  // Если аргумент 'ballType' не указан, то присваиваем значение 'regular'
-  this.ballType = ballType || "regular";
-};
+// var Ball = function(ballType) {
+//   // Если аргумент 'ballType' не указан, то присваиваем значение 'regular'
+//   this.ballType = ballType || "regular";
+// };
 
 
 // .................................................................................
@@ -1651,17 +1651,45 @@ var Ball = function(ballType) {
 // Пример (Вход -> Выход)
 // "john McClane" --> "McClane john"
 
-function nameShuffler(str){
-  //разделяем строку
-  const nameArray = str.split(' ');
+// function nameShuffler(str){
+//   //разделяем строку
+//   const nameArray = str.split(' ');
 
-// Меняем порядок слов, ставя сначала фамилию, а затем имя
-const swappedName = `${nameArray[1]} ${nameArray[0]}`;
+// // Меняем порядок слов, ставя сначала фамилию, а затем имя
+// const swappedName = `${nameArray[1]} ${nameArray[0]}`;
 
-// Возвращаем новую строку с поменянными местами именем и фамилией
-return swappedName;
-}
+// // Возвращаем новую строку с поменянными местами именем и фамилией
+// return swappedName;
+// }
 
 // ................................................................................
 
+// Есть массив с некоторыми числами. Все числа равны, кроме одного. Попробуйте найти его!
+
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// Гарантируется, что массив содержит не менее 3 чисел.
+
+// Тесты содержат очень большие массивы, поэтому подумайте о производительности.
+
+function findUniq(arr) {
+  const counts = {};
+  
+  for (const element of arr) {
+      counts[element] = (counts[element] || 0) + 1;
+  }
+  
+  for (const key in counts) {
+      if (counts[key] === 1) {
+          return parseFloat(key); // Если элемент встречается ровно один раз, возвращаем его
+      }
+  }
+  
+  return null; // Если ни один элемент не уникален, возвращаем null
+}
+
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ])); // 2
+console.log(findUniq([ 0, 0, 0.55, 0, 0 ])); // 0.55
+
+// ....................................................................................
 
