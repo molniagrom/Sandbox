@@ -1733,10 +1733,10 @@
 // function array(string) {
 //   if (string === "" || string.length === 1) {
 //     return null;
-//   } 
+//   }
 
 //   const elements = string.split(',').slice(1, -1);
-   
+
 //   if(elements.length === 0){
 //     return null;
 //   }
@@ -1744,5 +1744,9 @@
 //   return elements.join(' ');
 // }
 
-// .........................................................................................
+// ***
+// function array(arr) {
+//   return arr.split(",").slice(1, -1).join(" ") || null;
+// }
 
+// .........................................................................................
