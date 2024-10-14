@@ -1644,7 +1644,6 @@
 //   this.ballType = ballType || "regular";
 // };
 
-
 // .................................................................................
 
 // Напишите функцию, которая возвращает строку, в которой имя заменено фамилией.
@@ -1672,24 +1671,45 @@
 
 // Тесты содержат очень большие массивы, поэтому подумайте о производительности.
 
-function findUniq(arr) {
-  const counts = {};
-  
-  for (const element of arr) {
-      counts[element] = (counts[element] || 0) + 1;
-  }
-  
-  for (const key in counts) {
-      if (counts[key] === 1) {
-          return parseFloat(key); // Если элемент встречается ровно один раз, возвращаем его
-      }
-  }
-  
-  return null; // Если ни один элемент не уникален, возвращаем null
-}
+// function findUniq(arr) {
+//   const counts = {};
 
-console.log(findUniq([ 1, 1, 1, 2, 1, 1 ])); // 2
-console.log(findUniq([ 0, 0, 0.55, 0, 0 ])); // 0.55
+//   for (const element of arr) {
+//       counts[element] = (counts[element] || 0) + 1;
+//   }
+
+//   for (const key in counts) {
+//       if (counts[key] === 1) {
+//           return parseFloat(key); // Если элемент встречается ровно один раз, возвращаем его
+//       }
+//   }
+
+//   return null; // Если ни один элемент не уникален, возвращаем null
+// }
+
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ])); // 2
+// console.log(findUniq([ 0, 0, 0.55, 0, 0 ])); // 0.55
+
+// ***
+
+// function findUniq(arr) {
+//   arr.sort((a,b)=>a-b);
+//   return arr[0]==arr[1]?arr.pop():arr[0]
+// }
 
 // ....................................................................................
+
+// Вход: Массив элементов
+
+// ["ч","о","л","а"]
+
+// Вывод: строка с разделенными запятыми элементами массива в том же порядке.
+
+// "ч,о,л,а"
+
+// function printArray(array) {
+//   return array.toString();
+// }
+
+// ........................................................................................
 
