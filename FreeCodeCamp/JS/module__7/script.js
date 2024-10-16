@@ -102,5 +102,6 @@ const renderSongs = (array) => {
       </button>
       </li>
       `;
-    })
+    }).join("");
+    playlistSongs.innerHTML = songsHTML;
 };
