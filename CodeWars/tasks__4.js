@@ -1764,17 +1764,17 @@
 // Ввод всегда будет состоять только из строчных букв и никогда не будет пустым.
 
 
-function wordsToMarks(string) {
-  let sum = 0;
-  let result = string.split("").map((string) => string.charCodeAt(0) - 96);
-  for (let i = 0; i < result.length; i++) {
-    sum += result[i];
-  }
-  return sum;
-}
+// function wordsToMarks(string) {
+//   let sum = 0;
+//   let result = string.split("").map((string) => string.charCodeAt(0) - 96);
+//   for (let i = 0; i < result.length; i++) {
+//     sum += result[i];
+//   }
+//   return sum;
+// }
 
-// ***
-const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0)
+// // ***
+// const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0)
 
 // ..................................................................................
 
