@@ -1783,7 +1783,7 @@
 //Не имеет значения, заглавная или строчная буква — «eNglisH» тоже правильно.
 //Возвращаемое значение в виде логического значения: true, если строка содержит «English», false, если не содержит
 
-function spEng(sentence) {
-  return sentence.toLowerCase().includes("english");
-}
+// function spEng(sentence) {
+//   return sentence.toLowerCase().includes("english");
+// }
 
