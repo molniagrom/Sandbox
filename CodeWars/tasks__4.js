@@ -1763,7 +1763,6 @@
 
 // Ввод всегда будет состоять только из строчных букв и никогда не будет пустым.
 
-
 // function wordsToMarks(string) {
 //   let sum = 0;
 //   let result = string.split("").map((string) => string.charCodeAt(0) - 96);
@@ -1787,3 +1786,19 @@
 //   return sentence.toLowerCase().includes("english");
 // }
 
+// .......................................................................
+
+// Изограммы. в слове не должна повторяться буква
+
+function isIsogram(str) {
+  let strLow = str.toLowerCase();
+  let charSet = new Set();
+
+  for (const char of strLow) {
+    if (charSet.has(char)) {
+      return false;
+    }
+    charSet.add(char);
+  }
+  return true;
+}
