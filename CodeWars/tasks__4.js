@@ -1862,10 +1862,54 @@ function smallEnough(a, limit) {
 // gimme([5, 10, 14]) => 1
 // 10 — это число, которое находится между 5 и 14 , а индекс 10 во входном массиве равен 1 .
 
-function gimme (triplet) {
+function gimme(triplet) {
   const sortedArray = [...triplet].sort((a, b) => a - b);
   return triplet.indexOf(sortedArray[1]);
 }
 
 // ./.../....................................................................
+
+// Для данного здания с 3 этажами (пронумерованными 0по 2) имеется 2 лифта (названных «левый» и «правый»), напишите функцию, elevatorпринимающую 3 аргумента (по порядку):
+
+// left- Текущий этаж левого лифта
+// right- Текущий этаж правого лифта
+// call- Этаж, вызвавший лифт
+// Он должен вернуть название лифта, ближайшего к вызванному этажу ( "left"/ "right").
+
+// В случае, если оба лифта находятся на одинаковом расстоянии от вызываемого этажа, выбирайте лифт, расположенный правее.
+
+// Можно предположить, что входные данные всегда будут представлять собой допустимые целые числа в диапазоне от 0 до 2.
+
+// Примеры:
+
+// elevator(0, 1, 0); // => "left"
+// elevator(0, 1, 1); // => "right"
+// elevator(0, 1, 2); // => "right"
+// elevator(0, 0, 0); // => "right"
+// elevator(0, 2, 1); // => "right"
+
+function MathAbs(a, b) {
+  return Math.abs(a - b);
+}
+
+function elevator(left, right, call) {
+  const leftCall = MathAbs(left, call);
+  const rightCall = MathAbs(right, call);
+
+  if (leftCall === rightCall) {
+    return "right";
+  }
+
+  if (leftCall < rightCall) {
+    return "left";
+  }
+  return "right";
+}
+// ***
+function elevator(left, right, call) {
+  return Math.abs(call - left) < Math.abs(call - right) ? 'left' : 'right';
+}
+
+// .........................................................................
+
 
