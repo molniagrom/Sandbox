@@ -1907,9 +1907,23 @@ function elevator(left, right, call) {
 }
 // ***
 function elevator(left, right, call) {
-  return Math.abs(call - left) < Math.abs(call - right) ? 'left' : 'right';
+  return Math.abs(call - left) < Math.abs(call - right) ? "left" : "right";
 }
 
 // .........................................................................
 
+// Испытание:
+
+// Для заданного двумерного массива целых чисел вернуть сглаженную версию массива со всеми целыми числами в отсортированном (возрастающем) порядке.
+
+// Пример:
+
+// Учитывая [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], ваша функция должна возвращать [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+function flattenAndSort(array) {
+ const newArray = array.flat().sort((a, b) => a - b);
+  return newArray;
+}
+
+// ..............................................................................
 
