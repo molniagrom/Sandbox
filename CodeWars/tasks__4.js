@@ -1921,9 +1921,35 @@ function elevator(left, right, call) {
 // Учитывая [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], ваша функция должна возвращать [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
 function flattenAndSort(array) {
- const newArray = array.flat().sort((a, b) => a - b);
+  const newArray = array.flat().sort((a, b) => a - b);
   return newArray;
 }
 
 // ..............................................................................
 
+function add(a, b) {
+  return a + b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function mod(a, b) {
+    // остаток от деления\remainder of division
+
+  return a % b;
+}
+
+function exponent(a, b) {
+  // возведение в степень\degree conversion
+  return a ** b;
+}
+
+function subt(a, b) {
+  return a - b;
+}
