@@ -1940,8 +1940,7 @@ function multiply(a, b) {
 }
 
 function mod(a, b) {
-    // остаток от деления\remainder of division
-
+  // остаток от деления\remainder of division
   return a % b;
 }
 
@@ -1953,3 +1952,33 @@ function exponent(a, b) {
 function subt(a, b) {
   return a - b;
 }
+
+// ..........................................................................
+
+// В этом Ката вам будет дана строка, которая может содержать как заглавные, так и строчные буквы, и ваша задача — преобразовать эту строку либо в строку, состоящую только из строчных букв, либо только из заглавных букв на основе:
+
+// вносите как можно меньше изменений.
+// если строка содержит одинаковое количество заглавных и строчных букв, преобразовать строку в строчные.
+// Например:
+
+// solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
+// solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
+// solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
+
+function solve(s) {
+  let letterUpperCase = 0;
+  let letterLowerCase = 0;
+// Counting uppercase and lowercase letters
+  for (let letter of s) {
+    if (letter === letter.toUpperCase()) {
+      letterUpperCase++;
+    } else if (letter === letter.toLowerCase()) {
+      letterLowerCase++;
+    }
+  }
+// Determining the result based on counting
+  return letterUpperCase > letterLowerCase ? s.toUpperCase() : s.toLowerCase();
+}
+
+// .....................................................................
+
