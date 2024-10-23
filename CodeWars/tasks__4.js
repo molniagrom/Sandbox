@@ -1968,7 +1968,7 @@ function subt(a, b) {
 function solve(s) {
   let letterUpperCase = 0;
   let letterLowerCase = 0;
-// Counting uppercase and lowercase letters
+  // Counting uppercase and lowercase letters
   for (let letter of s) {
     if (letter === letter.toUpperCase()) {
       letterUpperCase++;
@@ -1976,9 +1976,38 @@ function solve(s) {
       letterLowerCase++;
     }
   }
-// Determining the result based on counting
+  // Determining the result based on counting
   return letterUpperCase > letterLowerCase ? s.toUpperCase() : s.toLowerCase();
 }
 
 // .....................................................................
+
+// Суммировать все числа заданного массива (cq. list), за исключением самого высокого и самого низкого элемента (по значению, а не по индексу!).
+
+// Самый высокий или самый низкий элемент — это один элемент на каждом краю, даже если их несколько с одинаковым значением.
+
+// Не забывайте о проверке входных данных.
+
+// Пример
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+// Проверка входных данных
+// Если вместо массива указано пустое значение ( null, None, Nothing, и т. д. ) или указанный массив является пустым списком или списком, содержащим только один элемент, возвращается .nil10
+
+function sumArray(array) {
+  // Check if the array is null or has 2 or fewer elements
+  if (!array || array.length <= 2) {
+    // If true, return 0
+    return 0;
+  }
+
+  // Sort the array in ascending order (from smallest to largest)
+  array.sort((a, b) => a - b);
+
+  // Remove the first and last elements, then sum the rest
+  return array.slice(1, -1).reduce((acc, curr) => acc + curr, 0);
+}
+
+
+// ..................................................................
 
