@@ -908,17 +908,18 @@
 // Молодежь до 21 года.
 // У взрослых их 21 и более.
 
-// function peopleWithAgeDrink(old) {
-//   if (old <= 13) {
-//     return "drink toddy";
-//   } else if (old <= 17) {
-//     return "drink coke";
-//   } else if (old >= 18 && old <= 20) {
-//     return "drink beer";
-//   } else if (old >= 21) {
-//     return "drink whisky";
-//   }
-// }
+function peopleWithAgeDrink(old) {
+  if (old <= 13) {
+    return "drink toddy";
+  } else if (old <= 17) {
+    return "drink coke";
+  } else if (old >= 18 && old <= 20) {
+    return "drink beer";
+  } else if (old >= 21) {
+    return "drink whisky";
+  }
+}
+// ***
 
 // ....................................................................................
 
@@ -2029,4 +2030,27 @@ function squareArea(B) {
 
 // ................................................................
 
+// Завершите метод, который принимает массив целых чисел и возвращает одно из следующих значений:
+
+// "yes, ascending"- если числа в массиве отсортированы в порядке возрастания
+// "yes, descending"- если числа в массиве отсортированы в порядке убывания
+// "no"- в противном случае
+// Можно предположить, что массив всегда будет верным и всегда будет один правильный ответ.
+
+function isSortedAndHow(array) {
+  const copyArrayForAscending = [...array];
+  const copyArrayForDescending = [...array];
+  const ascendingOrder = copyArrayForAscending.sort((a, b) => a - b);
+  const descendingOrder = copyArrayForDescending.sort((a, b) => b - a);
+
+  if (array.every((value, i) => value === ascendingOrder[i])) {
+    return "yes, ascending";
+  } else if (array.every((value, i) => value === descendingOrder[i])) {
+    return "yes, descending";
+  } else {
+    return "no";
+  }
+}
+
+// ................................................................
 
