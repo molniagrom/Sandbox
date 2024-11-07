@@ -1791,18 +1791,18 @@ function peopleWithAgeDrink(old) {
 
 // Изограммы. в слове не должна повторяться буква
 
-function isIsogram(str) {
-  let strLow = str.toLowerCase();
-  let charSet = new Set();
+// function isIsogram(str) {
+//   let strLow = str.toLowerCase();
+//   let charSet = new Set();
 
-  for (const char of strLow) {
-    if (charSet.has(char)) {
-      return false;
-    }
-    charSet.add(char);
-  }
-  return true;
-}
+//   for (const char of strLow) {
+//     if (charSet.has(char)) {
+//       return false;
+//     }
+//     charSet.add(char);
+//   }
+//   return true;
+// }
 
 //........................................................................
 
@@ -1810,15 +1810,15 @@ function isIsogram(str) {
 
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
-function grow(x) {
-  let result = 1;
-  for (let i = 0; i < x.length; i++) {
-    result *= x[i];
-  }
-  return result;
-}
-// ***
-const grow = (x) => x.reduce((a, b) => a * b);
+// function grow(x) {
+//   let result = 1;
+//   for (let i = 0; i < x.length; i++) {
+//     result *= x[i];
+//   }
+//   return result;
+// }
+// // ***
+// const grow = (x) => x.reduce((a, b) => a * b);
 
 // ......................................................................
 
@@ -1826,23 +1826,23 @@ const grow = (x) => x.reduce((a, b) => a * b);
 
 // Массив может содержать числа или строки. xможет быть любым. Возврат, trueесли массив содержит значение, falseесли нет. Со строками вам нужно будет учитывать регистр.
 
-const check = (a, x) => a.indexOf(x) != -1;
+// const check = (a, x) => a.indexOf(x) != -1;
 // ***
 // Метод .includes() более современный и читабельный по сравнению с .indexOf(). Он также лучше передаёт намерение проверки наличия элемента в массиве.
 
-const check2 = (a, x) => a.includes(x);
+// const check2 = (a, x) => a.includes(x);
 // .........................................................................
 
 // Вам будет дано arrayи limitзначение. Вы должны проверить, что все значения в массиве ниже или равны предельному значению. Если это так, верните true. В противном случае верните false.
 
 // Можно предположить, что все значения в массиве являются числами.
 
-function smallEnough(a, limit) {
-  const result = a.every((i) => {
-    return i <= limit;
-  });
-  return result;
-}
+// function smallEnough(a, limit) {
+//   const result = a.every((i) => {
+//     return i <= limit;
+//   });
+//   return result;
+// }
 // ***
 // function smallEnough(a, limit){
 //   return Math.max(...a) <= limit
@@ -1889,27 +1889,27 @@ function gimme(triplet) {
 // elevator(0, 0, 0); // => "right"
 // elevator(0, 2, 1); // => "right"
 
-function MathAbs(a, b) {
-  return Math.abs(a - b);
-}
+// function MathAbs(a, b) {
+//   return Math.abs(a - b);
+// }
 
-function elevator(left, right, call) {
-  const leftCall = MathAbs(left, call);
-  const rightCall = MathAbs(right, call);
+// function elevator(left, right, call) {
+//   const leftCall = MathAbs(left, call);
+//   const rightCall = MathAbs(right, call);
 
-  if (leftCall === rightCall) {
-    return "right";
-  }
+//   if (leftCall === rightCall) {
+//     return "right";
+//   }
 
-  if (leftCall < rightCall) {
-    return "left";
-  }
-  return "right";
-}
-// ***
-function elevator(left, right, call) {
-  return Math.abs(call - left) < Math.abs(call - right) ? "left" : "right";
-}
+//   if (leftCall < rightCall) {
+//     return "left";
+//   }
+//   return "right";
+// }
+// // ***
+// function elevator(left, right, call) {
+//   return Math.abs(call - left) < Math.abs(call - right) ? "left" : "right";
+// }
 
 // .........................................................................
 
@@ -1921,38 +1921,38 @@ function elevator(left, right, call) {
 
 // Учитывая [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], ваша функция должна возвращать [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-function flattenAndSort(array) {
-  const newArray = array.flat().sort((a, b) => a - b);
-  return newArray;
-}
+// function flattenAndSort(array) {
+//   const newArray = array.flat().sort((a, b) => a - b);
+//   return newArray;
+// }
 
 // ..............................................................................
 
-function add(a, b) {
-  return a + b;
-}
+// function add(a, b) {
+//   return a + b;
+// }
 
-function divide(a, b) {
-  return a / b;
-}
+// function divide(a, b) {
+//   return a / b;
+// }
 
-function multiply(a, b) {
-  return a * b;
-}
+// function multiply(a, b) {
+//   return a * b;
+// }
 
-function mod(a, b) {
-  // остаток от деления\remainder of division
-  return a % b;
-}
+// function mod(a, b) {
+//   // остаток от деления\remainder of division
+//   return a % b;
+// }
 
-function exponent(a, b) {
-  // возведение в степень\degree conversion
-  return a ** b;
-}
+// function exponent(a, b) {
+//   // возведение в степень\degree conversion
+//   return a ** b;
+// }
 
-function subt(a, b) {
-  return a - b;
-}
+// function subt(a, b) {
+//   return a - b;
+// }
 
 // ..........................................................................
 
@@ -1966,20 +1966,20 @@ function subt(a, b) {
 // solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
 // solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
 
-function solve(s) {
-  let letterUpperCase = 0;
-  let letterLowerCase = 0;
-  // Counting uppercase and lowercase letters
-  for (let letter of s) {
-    if (letter === letter.toUpperCase()) {
-      letterUpperCase++;
-    } else if (letter === letter.toLowerCase()) {
-      letterLowerCase++;
-    }
-  }
-  // Determining the result based on counting
-  return letterUpperCase > letterLowerCase ? s.toUpperCase() : s.toLowerCase();
-}
+// function solve(s) {
+//   let letterUpperCase = 0;
+//   let letterLowerCase = 0;
+//   // Counting uppercase and lowercase letters
+//   for (let letter of s) {
+//     if (letter === letter.toUpperCase()) {
+//       letterUpperCase++;
+//     } else if (letter === letter.toLowerCase()) {
+//       letterLowerCase++;
+//     }
+//   }
+//   // Determining the result based on counting
+//   return letterUpperCase > letterLowerCase ? s.toUpperCase() : s.toLowerCase();
+// }
 
 // .....................................................................
 
@@ -1995,19 +1995,19 @@ function solve(s) {
 // Проверка входных данных
 // Если вместо массива указано пустое значение ( null, None, Nothing, и т. д. ) или указанный массив является пустым списком или списком, содержащим только один элемент, возвращается .nil10
 
-function sumArray(array) {
-  // Check if the array is null or has 2 or fewer elements
-  if (!array || array.length <= 2) {
-    // If true, return 0
-    return 0;
-  }
+// function sumArray(array) {
+//   // Check if the array is null or has 2 or fewer elements
+//   if (!array || array.length <= 2) {
+//     // If true, return 0
+//     return 0;
+//   }
 
-  // Sort the array in ascending order (from smallest to largest)
-  array.sort((a, b) => a - b);
+//   // Sort the array in ascending order (from smallest to largest)
+//   array.sort((a, b) => a - b);
 
-  // Remove the first and last elements, then sum the rest
-  return array.slice(1, -1).reduce((acc, curr) => acc + curr, 0);
-}
+//   // Remove the first and last elements, then sum the rest
+//   return array.slice(1, -1).reduce((acc, curr) => acc + curr, 0);
+// }
 
 // ..................................................................
 
@@ -2017,16 +2017,16 @@ function sumArray(array) {
 // filter_list([1,'a','b',0,15]) == [1,0,15]
 // filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
-const filter_list = (l) => l.filter((i) => typeof i !== "string");
+// const filter_list = (l) => l.filter((i) => typeof i !== "string");
 
 // .....................................................................
 
 // Завершите функцию, которая вычисляет площадь красного квадрата, когда Aв качестве входных данных задана длина дуги окружности. Верните результат, округленный до двух десятичных знаков.
 
-function squareArea(B) {
-  const r = (2 * B) / Math.PI;
-  return r ** 2;
-}
+// function squareArea(B) {
+//   const r = (2 * B) / Math.PI;
+//   return r ** 2;
+// }
 
 // ................................................................
 
@@ -2037,20 +2037,20 @@ function squareArea(B) {
 // "no"- в противном случае
 // Можно предположить, что массив всегда будет верным и всегда будет один правильный ответ.
 
-function isSortedAndHow(array) {
-  const copyArrayForAscending = [...array];
-  const copyArrayForDescending = [...array];
-  const ascendingOrder = copyArrayForAscending.sort((a, b) => a - b);
-  const descendingOrder = copyArrayForDescending.sort((a, b) => b - a);
+// function isSortedAndHow(array) {
+//   const copyArrayForAscending = [...array];
+//   const copyArrayForDescending = [...array];
+//   const ascendingOrder = copyArrayForAscending.sort((a, b) => a - b);
+//   const descendingOrder = copyArrayForDescending.sort((a, b) => b - a);
 
-  if (array.every((value, i) => value === ascendingOrder[i])) {
-    return "yes, ascending";
-  } else if (array.every((value, i) => value === descendingOrder[i])) {
-    return "yes, descending";
-  } else {
-    return "no";
-  }
-}
+//   if (array.every((value, i) => value === ascendingOrder[i])) {
+//     return "yes, ascending";
+//   } else if (array.every((value, i) => value === descendingOrder[i])) {
+//     return "yes, descending";
+//   } else {
+//     return "no";
+//   }
+// }
 
 // ................................................................
 
@@ -2060,9 +2060,9 @@ function isSortedAndHow(array) {
 // 5.5589 is rounded 5.56
 // -3.3424 is rounded -3.34
 
-function twoDecimalPlaces(n) {
-  return Number(n.toFixed(2));
-}
+// function twoDecimalPlaces(n) {
+//   return Number(n.toFixed(2));
+// }
 
 // ................................................................
 
@@ -2074,23 +2074,39 @@ function twoDecimalPlaces(n) {
 
 // Примечание: функция принимает целое число и возвращает целое число.
 
-function squareDigits(num) {
-  const numToStr = String(num);
-  const strToArr = numToStr.split("");
-  const squaring = strToArr.map((num) => num ** 2);
-  const squaringToStr = squaring.join("");
-  const squaringToStrToNum = Number(squaringToStr);
+// function squareDigits(num) {
+//   const numToStr = String(num);
+//   const strToArr = numToStr.split("");
+//   const squaring = strToArr.map((num) => num ** 2);
+//   const squaringToStr = squaring.join("");
+//   const squaringToStrToNum = Number(squaringToStr);
 
-  return squaringToStrToNum;
-}
+//   return squaringToStrToNum;
+// }
 
 // .............................................................
 
 // Массивы JavaScript поддерживают функцию фильтра (начиная с JavaScript 1.6).
-// Используйте функцию фильтрации для выполнения заданной функции. 
+// Используйте функцию фильтрации для выполнения заданной функции.
 // Решение будет выглядеть следующим образом: getEvenNumbers([2,4,5,6]) // should == [2,4,6]
 
-const getEvenNumbers = (numbersArray) => numbersArray.filter((num) => !(num % 2));
+// const getEvenNumbers = (numbersArray) =>
+//   numbersArray.filter((num) => !(num % 2));
 
 // .............................................................
+
+// Возвращает количество гласных в заданной строке.
+// Мы будем считать a, e, i, o, uгласными для этого Ката (но не y).
+// Входная строка будет состоять только из строчных букв и/или пробелов.
+
+function getCount(str) {
+  let convertToStrToArr = str.split("");
+  const vowels = "aeiou";
+  let countingVowels = convertToStrToArr.filter((w) => vowels.includes(w));
+  return countingVowels.length;
+}
+
+console.log(getCount("a e i o u"));
+
+// ...........................................................................
 
