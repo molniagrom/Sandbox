@@ -2110,3 +2110,55 @@ console.log(getCount("a e i o u"));
 
 // ...........................................................................
 
+// Напишите функцию, которая принимает fightстроку, состоящую только из маленьких букв, и возвращает, кто победил в битве. Когда побеждает левая сторона, возвращайте Left side wins!, когда побеждает правая сторона, возвращайте Right side wins!, в противном случае возвращайте Let's fight again!.
+
+// Буквы левой стороны и их сила:
+
+//  w - 4
+//  p - 3
+//  b - 2
+//  s - 1
+// Буквы правой стороны и их сила:
+
+//  m - 4
+//  q - 3
+//  d - 2
+//  z - 1
+// Остальные буквы не имеют силы и являются лишь жертвами.
+
+// Пример
+// alphabetWar("z");        //=> Right side wins!
+// alphabetWar("zdqmwpbs"); //=> Let's fight again!
+// alphabetWar("zzzzs");    //=> Right side wins!
+// alphabetWar("wwwwwwz");  //=> Left side wins!
+
+function alphabetWar(fight){
+  const leftPower = { w: 4, p: 3, b: 2, s: 1 };
+  const rightPower = { m: 4, q: 3, d: 2, z: 1 };
+
+  let leftScore = 0;
+  let rightScore = 0;
+  
+  for (let i = 0; i < fight.length; i++){
+    const letter = fight[i]
+    
+    if (leftPower[letter]){
+      leftScore += leftPower[letter]
+    }
+    
+     if (rightPower[letter]){
+      rightScore += rightPower[letter]
+    }
+    
+  }
+    
+    if (leftScore  > rightScore) {
+      return "Left side wins!";
+    } else if (rightScore > leftScore ) {
+      return "Right side wins!";
+    } else {
+      return "Let's fight again!";
+    }
+ 
+}
+// .......................................................................
