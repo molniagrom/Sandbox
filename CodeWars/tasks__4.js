@@ -2132,33 +2132,58 @@ console.log(getCount("a e i o u"));
 // alphabetWar("zzzzs");    //=> Right side wins!
 // alphabetWar("wwwwwwz");  //=> Left side wins!
 
-function alphabetWar(fight){
-  const leftPower = { w: 4, p: 3, b: 2, s: 1 };
-  const rightPower = { m: 4, q: 3, d: 2, z: 1 };
+// function alphabetWar(fight){
+//   const leftPower = { w: 4, p: 3, b: 2, s: 1 };
+//   const rightPower = { m: 4, q: 3, d: 2, z: 1 };
 
-  let leftScore = 0;
-  let rightScore = 0;
-  
-  for (let i = 0; i < fight.length; i++){
-    const letter = fight[i]
-    
-    if (leftPower[letter]){
-      leftScore += leftPower[letter]
-    }
-    
-     if (rightPower[letter]){
-      rightScore += rightPower[letter]
-    }
-    
-  }
-    
-    if (leftScore  > rightScore) {
-      return "Left side wins!";
-    } else if (rightScore > leftScore ) {
-      return "Right side wins!";
-    } else {
-      return "Let's fight again!";
-    }
- 
-}
+//   let leftScore = 0;
+//   let rightScore = 0;
+
+//   for (let i = 0; i < fight.length; i++){
+//     const letter = fight[i]
+
+//     if (leftPower[letter]){
+//       leftScore += leftPower[letter]
+//     }
+
+//      if (rightPower[letter]){
+//       rightScore += rightPower[letter]
+//     }
+
+//   }
+
+//     if (leftScore  > rightScore) {
+//       return "Left side wins!";
+//     } else if (rightScore > leftScore ) {
+//       return "Right side wins!";
+//     } else {
+//       return "Let's fight again!";
+//     }
+
+// }
 // .......................................................................
+
+// Чтобы найти объем (в кубических сантиметрах) прямоугольного параллелепипеда, используйте формулу:
+
+// volume = Length * Width * Height
+
+// Но кто-то забыл вести надлежащий учет, поэтому у нас есть только объем и длина одной стороны!
+
+// Вам предстоит выяснить, равны ли стороны прямоугольного параллелепипеда (= является ли он кубом).
+
+// Верните, trueесли прямоугольный параллелепипед может иметь равные стороны, falseв противном случае верните.
+
+// Возврат falseтакже для недопустимых чисел (например, объем или сторона меньше или равна 0).
+
+// Примечание: сторона будет целым числом.
+
+function cubeChecker(volume, side) {
+  if (volume <= 0 || side <= 0) {
+    return false;
+  } else {
+    const cubeVolume = side ** 3;
+    return cubeVolume === volume;
+  }
+}
+
+// ......................................................................
