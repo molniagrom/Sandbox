@@ -2198,10 +2198,31 @@ function cubeChecker(volume, side) {
 // Примечания
 // Строка strникогда не будет нулевой.
 
-var replaceDots = function(str) {
-  return str.replace(/\./g, '-');
-}
+var replaceDots = function (str) {
+  return str.replace(/\./g, "-");
+};
 
 // ........................................................................
+
+// Проверьте, содержит ли строка одинаковое количество символов 'x' и 'o'. Метод должен возвращать логическое значение и быть нечувствительным к регистру. Строка может содержать любой символ.
+
+// Примеры ввода/вывода:
+
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+function XO(str) {
+  let strToArr = str.toLowerCase().split("")
+
+  let x = strToArr.filter((elem) => elem === "x");
+  let o = strToArr.filter((elem) => elem === "o");
+
+  return o.length === x.length ? true : false;
+}
+
+// .......................................................................
 
 
