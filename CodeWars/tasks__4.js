@@ -909,16 +909,17 @@
 // У взрослых их 21 и более.
 
 function peopleWithAgeDrink(old) {
-  if (old <= 13) {
-    return "drink toddy";
-  } else if (old <= 17) {
-    return "drink coke";
-  } else if (old >= 18 && old <= 20) {
-    return "drink beer";
-  } else if (old >= 21) {
-    return "drink whisky";
-  }
+    if (old <= 13) {
+        return "drink toddy";
+    } else if (old <= 17) {
+        return "drink coke";
+    } else if (old >= 18 && old <= 20) {
+        return "drink beer";
+    } else if (old >= 21) {
+        return "drink whisky";
+    }
 }
+
 // ***
 
 // ....................................................................................
@@ -1864,8 +1865,8 @@ function peopleWithAgeDrink(old) {
 // 10 — это число, которое находится между 5 и 14 , а индекс 10 во входном массиве равен 1 .
 
 function gimme(triplet) {
-  const sortedArray = [...triplet].sort((a, b) => a - b);
-  return triplet.indexOf(sortedArray[1]);
+    const sortedArray = [...triplet].sort((a, b) => a - b);
+    return triplet.indexOf(sortedArray[1]);
 }
 
 // ./.../....................................................................
@@ -2100,10 +2101,10 @@ function gimme(triplet) {
 // Входная строка будет состоять только из строчных букв и/или пробелов.
 
 function getCount(str) {
-  let convertToStrToArr = str.split("");
-  const vowels = "aeiou";
-  let countingVowels = convertToStrToArr.filter((w) => vowels.includes(w));
-  return countingVowels.length;
+    let convertToStrToArr = str.split("");
+    const vowels = "aeiou";
+    let countingVowels = convertToStrToArr.filter((w) => vowels.includes(w));
+    return countingVowels.length;
 }
 
 console.log(getCount("a e i o u"));
@@ -2178,12 +2179,12 @@ console.log(getCount("a e i o u"));
 // Примечание: сторона будет целым числом.
 
 function cubeChecker(volume, side) {
-  if (volume <= 0 || side <= 0) {
-    return false;
-  } else {
-    const cubeVolume = side ** 3;
-    return cubeVolume === volume;
-  }
+    if (volume <= 0 || side <= 0) {
+        return false;
+    } else {
+        const cubeVolume = side ** 3;
+        return cubeVolume === volume;
+    }
 }
 
 // ......................................................................
@@ -2199,7 +2200,7 @@ function cubeChecker(volume, side) {
 // Строка strникогда не будет нулевой.
 
 var replaceDots = function (str) {
-  return str.replace(/\./g, "-");
+    return str.replace(/\./g, "-");
 };
 
 // ........................................................................
@@ -2215,12 +2216,12 @@ var replaceDots = function (str) {
 // XO("zzoo") => false
 
 function XO(str) {
-  let strToArr = str.toLowerCase().split("")
+    let strToArr = str.toLowerCase().split("")
 
-  let x = strToArr.filter((elem) => elem === "x");
-  let o = strToArr.filter((elem) => elem === "o");
+    let x = strToArr.filter((elem) => elem === "x");
+    let o = strToArr.filter((elem) => elem === "o");
 
-  return o.length === x.length ? true : false;
+    return o.length === x.length ? true : false;
 }
 
 // .......................................................................
@@ -2237,11 +2238,24 @@ function XO(str) {
 
 // Все строки в массиве, переданном вашей функции, будут иметь разную длину, поэтому вам не придется решать, как упорядочить несколько строк одинаковой длины.
 
-function sortByLength(array) {
-
-  let sortArray = array.sort((a, b) => a.length - b.length);
-  return sortArray;
-}
+// function sortByLength(array) {
+//
+//   let sortArray = array.sort((a, b) => a.length - b.length);
+//   return sortArray;
+// }
 
 // ......................................................................................
+function remove(s, n) {
+    const sToStr = s.split(""); // Преобразуем строку в массив символов
 
+    for (let i = 0; i < n; i++) { // Цикл для удаления n восклицательных знаков
+        const index = sToStr.indexOf("!"); // Найти первый '!'
+        if (index !== -1) { // Если '!' найден
+            sToStr.splice(index, 1); // Удалить найденный '!'
+        } else {
+            break; // Если '!' больше нет, выходим из цикла
+        }
+    }
+
+    return sToStr.join(""); // Собираем массив обратно в строку
+}
