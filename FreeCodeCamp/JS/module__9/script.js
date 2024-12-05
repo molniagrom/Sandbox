@@ -28,7 +28,7 @@ const myFavoriteFootballTeam = {
       isCaptain: false,
       nickname: null,
     },
-     {
+    {
       name: "Ricardo Bochini",
       position: "midfielder",
       number: 3,
@@ -183,6 +183,15 @@ headCoach.textContent = coachName;
 const setPlayerCards = (arr = players) => {
 
 
+  playerCards.innerHTML += arr.map(
+      ({ name, position, number, isCaptain, nickname }) => {
+        return `
+        <div class="player-card">
+      
+        </div>
+      `;
+      }
+  );
 
 
 };
