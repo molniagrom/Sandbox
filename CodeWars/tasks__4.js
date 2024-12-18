@@ -2280,17 +2280,40 @@ function XO(str) {
 // 465 -> '3138.75 Chinese Yuan'
 // Курс обмена, который вы должны использовать, составляет 6,75 CNY за 1 USD. Все числа должны быть представлены в виде строки с 2 десятичными знаками. (например, "21.00", а НЕ "21.0" или "21")
 
-const usdcny = (usd) => (usd * 6.75).toFixed(2) + " Chinese Yuan";
+// const usdcny = (usd) => (usd * 6.75).toFixed(2) + " Chinese Yuan";
 
 //........................................................................
 
+// дано число, надо сложить все числа от нуля до этого числа
 
+// var SequenceSum = (function () {
+//     function SequenceSum() {}
+//
+//     SequenceSum.showSequence = function (count) {
+//         let result = [];
+//
+//         if (count < 0) {
+//             return `${count}<0`;
+//         }
+//
+//         if (count === 0) {
+//             return '0=0';
+//         }
+//
+//         for (let i = 0; i <= count; i++) {
+//             result.push(i);
+//         }
+//
+//         let sum = result.reduce((a, b) => a + b);
+//         let numbersString = result.join("+");
+//
+//         return `${numbersString} = ${sum}`;
+//     };
+//
+//     return SequenceSum;
+// })();
 
-
-
-
-
-
+//...................................................................
 
 
 
