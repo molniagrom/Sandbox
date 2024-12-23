@@ -97,9 +97,7 @@
 // ................................................................
 
 // Вам дан массив целых чисел нечетной длины , в котором все числа одинаковы, за исключением одного числа.
-
 // Завершите метод, который принимает такой массив и возвращает это единственное отличающееся число.
-
 // Входной массив всегда будет действителен! (нечетная длина >= 3)
 
 // Примеры
@@ -908,17 +906,17 @@
 // Молодежь до 21 года.
 // У взрослых их 21 и более.
 
-function peopleWithAgeDrink(old) {
-    if (old <= 13) {
-        return "drink toddy";
-    } else if (old <= 17) {
-        return "drink coke";
-    } else if (old >= 18 && old <= 20) {
-        return "drink beer";
-    } else if (old >= 21) {
-        return "drink whisky";
-    }
-}
+// function peopleWithAgeDrink(old) {
+//     if (old <= 13) {
+//         return "drink toddy";
+//     } else if (old <= 17) {
+//         return "drink coke";
+//     } else if (old >= 18 && old <= 20) {
+//         return "drink beer";
+//     } else if (old >= 21) {
+//         return "drink whisky";
+//     }
+// }
 
 // ***
 
@@ -1864,10 +1862,10 @@ function peopleWithAgeDrink(old) {
 // gimme([5, 10, 14]) => 1
 // 10 — это число, которое находится между 5 и 14 , а индекс 10 во входном массиве равен 1 .
 
-function gimme(triplet) {
-    const sortedArray = [...triplet].sort((a, b) => a - b);
-    return triplet.indexOf(sortedArray[1]);
-}
+// function gimme(triplet) {
+//     const sortedArray = [...triplet].sort((a, b) => a - b);
+//     return triplet.indexOf(sortedArray[1]);
+// }
 
 // ./.../....................................................................
 
@@ -2100,14 +2098,14 @@ function gimme(triplet) {
 // Мы будем считать a, e, i, o, uгласными для этого Ката (но не y).
 // Входная строка будет состоять только из строчных букв и/или пробелов.
 
-function getCount(str) {
-    let convertToStrToArr = str.split("");
-    const vowels = "aeiou";
-    let countingVowels = convertToStrToArr.filter((w) => vowels.includes(w));
-    return countingVowels.length;
-}
-
-console.log(getCount("a e i o u"));
+// function getCount(str) {
+//     let convertToStrToArr = str.split("");
+//     const vowels = "aeiou";
+//     let countingVowels = convertToStrToArr.filter((w) => vowels.includes(w));
+//     return countingVowels.length;
+// }
+//
+// console.log(getCount("a e i o u"));
 
 // ...........................................................................
 
@@ -2178,14 +2176,14 @@ console.log(getCount("a e i o u"));
 
 // Примечание: сторона будет целым числом.
 
-function cubeChecker(volume, side) {
-    if (volume <= 0 || side <= 0) {
-        return false;
-    } else {
-        const cubeVolume = side ** 3;
-        return cubeVolume === volume;
-    }
-}
+// function cubeChecker(volume, side) {
+//     if (volume <= 0 || side <= 0) {
+//         return false;
+//     } else {
+//         const cubeVolume = side ** 3;
+//         return cubeVolume === volume;
+//     }
+// }
 
 // ......................................................................
 
@@ -2199,9 +2197,9 @@ function cubeChecker(volume, side) {
 // Примечания
 // Строка strникогда не будет нулевой.
 
-var replaceDots = function (str) {
-    return str.replace(/\./g, "-");
-};
+// var replaceDots = function (str) {
+//     return str.replace(/\./g, "-");
+// };
 
 // ........................................................................
 
@@ -2215,14 +2213,14 @@ var replaceDots = function (str) {
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
 
-function XO(str) {
-    let strToArr = str.toLowerCase().split("")
-
-    let x = strToArr.filter((elem) => elem === "x");
-    let o = strToArr.filter((elem) => elem === "o");
-
-    return o.length === x.length ? true : false;
-}
+// function XO(str) {
+//     let strToArr = str.toLowerCase().split("")
+//
+//     let x = strToArr.filter((elem) => elem === "x");
+//     let o = strToArr.filter((elem) => elem === "o");
+//
+//     return o.length === x.length ? true : false;
+// }
 
 // .......................................................................
 
@@ -2315,8 +2313,30 @@ function XO(str) {
 
 //...................................................................
 
+// Вам будет дана непустая строка. Ваша задача — вернуть средний символ(ы) строки.
+//
+//     Если длина строки нечетная, вернуть средний символ.
+//     Если длина строки четная, вернуть 2 средних символа.
+//     Примеры:
+// "test" --> "es"
+// "testing" --> "t"
+// "middle" --> "dd"
+// "A" --> "A"
 
-
-
-
+// function getMiddle(s) {
+//     debugger
+//     let sLength = s.length;
+//     if (sLength % 2 === 0) {
+//         let start = sLength / 2 - 1
+//         let end = sLength / 2 + 1
+//
+//         return s.substring(start, end)
+//     } else {
+//         let a = Math.floor(sLength / 2)
+//         let b = Math.ceil(sLength / 2)
+//         return s.substring(a, b)
+//     }
+// }
+//
+// getMiddle("alina")
 
