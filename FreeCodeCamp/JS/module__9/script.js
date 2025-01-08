@@ -205,7 +205,5 @@ playersDropdownList.addEventListener("change", (e) => {
       break;
 
 
-
-
-  }
+        }
 });
