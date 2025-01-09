@@ -198,7 +198,6 @@ const setPlayerCards = (arr = players) => {
 
 playersDropdownList.addEventListener("change", (e) => {
   playerCards.innerHTML = "";
-
   switch (e.target.value) {
     case "nickname":
       setPlayerCards(players.filter((player) => player.nickname !== null));
@@ -206,10 +205,18 @@ playersDropdownList.addEventListener("change", (e) => {
     case "forward":
       setPlayerCards(players.filter((player) => player.position === "forward"));
       break;
-
     case "midfielder":
-      setPlayerCards(players.filter((player) => player.position === "midfielder"));
+      setPlayerCards(
+          players.filter((player) => player.position === "midfielder")
+      );
       break;
+    case "defender":
+      setPlayerCards(
+          players.filter((player) => player.position === "defender")
+      );
+      break;
+
+
 
 
   }
