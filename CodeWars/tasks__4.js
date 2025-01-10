@@ -2438,29 +2438,55 @@ function number(array) {
 //
 //     Убедитесь, что вы охватываете случаи, когда некоторые слова не отображаются с правильной регистрацией. Например, ввод "pOLitiCIaN"должен по-прежнему возвращать "Your tax dollars".
 
-    function getDrinkByProfession(param) {
-    let paramNorm = param.toLowerCase();
-
-    if (paramNorm === "jabroni") {
-        return "Patron Tequila";
-    } else if (paramNorm === "school counselor") {
-        return "Anything with Alcohol";
-    } else if (paramNorm === "programmer") {
-        return "Hipster Craft Beer";
-    } else if (paramNorm === "bike gang member") {
-        return "Moonshine";
-    } else if (paramNorm === "politician") {
-        return "Your tax dollars";
-    } else if (paramNorm === "rapper") {
-        return "Cristal";
-    } else {
-        return "Beer";
-    }
-}
+//     function getDrinkByProfession(param) {
+//     let paramNorm = param.toLowerCase();
+//
+//     if (paramNorm === "jabroni") {
+//         return "Patron Tequila";
+//     } else if (paramNorm === "school counselor") {
+//         return "Anything with Alcohol";
+//     } else if (paramNorm === "programmer") {
+//         return "Hipster Craft Beer";
+//     } else if (paramNorm === "bike gang member") {
+//         return "Moonshine";
+//     } else if (paramNorm === "politician") {
+//         return "Your tax dollars";
+//     } else if (paramNorm === "rapper") {
+//         return "Cristal";
+//     } else {
+//         return "Beer";
+//     }
+// }
 
 //.............................................................................
 
+// Задача
+// Данную строку strперевернуть и исключить все неалфавитные символы.
+//
+//     Пример
+// Для str = "krishan", вывод должен быть "nahsirk".
+//
+//     Для str = "ultr53o?n", вывод должен быть "nortlu".
+//
+//     Ввод/вывод
+//     [input]нитьstr
+// Строка состоит из строчных латинских букв, цифр и символов.
+//
+//     [output]строка
 
+// function reverseLetter(str) {
+//     const alphabet = [
+//         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+//         'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+//         'u', 'v', 'w', 'x', 'y', 'z'
+//     ]
+//
+//     const strSplit = str.split('')
+//     const filteredStr = strSplit.filter(i => alphabet.includes(i))
+//     return filteredStr.reverse().join('');
+// }
+
+//.............................................................................
 
 
 
