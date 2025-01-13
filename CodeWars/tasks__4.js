@@ -2490,12 +2490,54 @@ function number(array) {
 
 // Вернуть тип суммы двух аргументов
 
-function typeOfSum(a, b) {
-    let sum = a + b
-    return typeof sum
+// function typeOfSum(a, b) {
+//     let sum = a + b
+//     return typeof sum
+// }
+
+//.............................................................................
+
+// В этом ката мы создадим функцию для проверки задержки менструации.
+//
+//     Наша функция будет принимать три параметра:
+//
+//     last - Объект Date с датой последнего периода
+//
+// сегодня - объект Date с датой проверки
+//
+// cycleLength — целое число, представляющее продолжительность цикла в днях.
+//
+//     Верните true, если количество дней, прошедших с прошлого по сегодняшний день, больше cycleLength. В противном случае верните false.
+//
+
+function periodIsLate(last, today, cycleLength) {
+    let qualityDay = today - last
+    const millisecondsInADay = 1000 * 60 * 60 * 24;
+    let realDay = qualityDay / millisecondsInADay;
+    if (realDay > cycleLength) {
+        return true
+    } else {
+        return false
+    }
 }
 
 //.............................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
