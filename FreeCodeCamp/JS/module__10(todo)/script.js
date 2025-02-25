@@ -13,6 +13,8 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
+
+
 openTaskFormBtn.addEventListener("click", () =>
     taskForm.classList.toggle("hidden")
 );
@@ -57,5 +59,5 @@ taskForm.addEventListener("submit", (e) => {
         }
     );
 
+    taskForm.classList.toggle("hidden");
 });
-
