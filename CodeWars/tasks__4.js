@@ -2404,12 +2404,12 @@
 //     [] --> []
 //     ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
-function number(array) {
-    if (array === []) {
-        return array;
-    }
-    return array.map((n, i) => `${i + 1}: ${n}`)
-}
+// function number(array) {
+//     if (array === []) {
+//         return array;
+//     }
+//     return array.map((n, i) => `${i + 1}: ${n}`)
+// }
 
 // ...........................................................................
 
@@ -2510,16 +2510,16 @@ function number(array) {
 //     Верните true, если количество дней, прошедших с прошлого по сегодняшний день, больше cycleLength. В противном случае верните false.
 //
 
-function periodIsLate(last, today, cycleLength) {
-    let qualityDay = today - last
-    const millisecondsInADay = 1000 * 60 * 60 * 24;
-    let realDay = qualityDay / millisecondsInADay;
-    if (realDay > cycleLength) {
-        return true
-    } else {
-        return false
-    }
-}
+// function periodIsLate(last, today, cycleLength) {
+//     let qualityDay = today - last
+//     const millisecondsInADay = 1000 * 60 * 60 * 24;
+//     let realDay = qualityDay / millisecondsInADay;
+//     if (realDay > cycleLength) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
 //.............................................................................
 
@@ -2538,13 +2538,13 @@ function periodIsLate(last, today, cycleLength) {
 // 15  =>  13
 // -3  =>  -3
 
-function getRealFloor(n) {
-    if (n <= 0) {
-        return n
-    }
-
-   return n < 13 ? n -1 : n - 2
-}
+// function getRealFloor(n) {
+//     if (n <= 0) {
+//         return n
+//     }
+//
+//    return n < 13 ? n -1 : n - 2
+// }
 
 //.............................................................................
 
@@ -2554,13 +2554,13 @@ function getRealFloor(n) {
 //     В этом случае мы возвращаем, "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.".
 //     В противном случае вернитесь False/false(в соответствии с используемым языком).
 
-function playerRankUp (points) {
-  if(points >= 100){
-      return "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up."
-  } else {
-      return false
-  }
-}
+// function playerRankUp (points) {
+//   if(points >= 100){
+//       return "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up."
+//   } else {
+//       return false
+//   }
+// }
 
 //.............................................................................
 
@@ -2571,24 +2571,24 @@ function playerRankUp (points) {
 //     3 needs to become $3.00
 // 3.1 needs to become $3.10
 
-function formatMoney(amount){
-    return `$${amount.toFixed(2)}`;
-}
+// function formatMoney(amount){
+//     return `$${amount.toFixed(2)}`;
+// }
 
 //.............................................................................
 
 // Для этой задачи вам необходимо создать программу, которая говорит, кто съел последнее печенье. Если входные данные — строка, то «Зак» съел печенье. Если входные данные — число с плавающей точкой или целое число, то «Моника» съела печенье. Если входные данные — что-то еще, то «собака» съела печенье. Способ возврата утверждения: «Кто съел последнее печенье? Это был (имя)!»
 // Пример: Ввод = "привет" --> Вывод = "Кто съел последнее печенье? Это был Зак! (Причина, по которой вы возвращаете Зака, заключается в том, что ввод представляет собой строку)
 
-function cookie(x){
-  if (typeof x === "string") {
-      return `Who ate the last cookie? It was Zach!`
-  } else if (typeof x === "number") {
-      return `Who ate the last cookie? It was Monica!`
-  } else {
-      return `Who ate the last cookie? It was the dog!`
-  }
-}
+// function cookie(x){
+//   if (typeof x === "string") {
+//       return `Who ate the last cookie? It was Zach!`
+//   } else if (typeof x === "number") {
+//       return `Who ate the last cookie? It was Monica!`
+//   } else {
+//       return `Who ate the last cookie? It was the dog!`
+//   }
+// }
 
 //.............................................................................
 
@@ -2607,25 +2607,25 @@ function cookie(x){
 // 5, 2, "multiply" --> 10
 // 5, 2, "divide"   --> 2.5
 // Попробуйте сделать это без использования операторов if!
-
-function arithmetic(a, b, operator){
- switch (operator) {
-     case "add":
-        return  a + b
-     break;
-        case "subtract":
-            return  a - b
-     break;
-            case "multiply":
-                return  a * b
-     break
-     case "divide":
-         return  a / b
-     break;
- }
-}
-
-function correctPolishLetters (string) {
+//
+// function arithmetic(a, b, operator){
+//  switch (operator) {
+//      case "add":
+//         return  a + b
+//      break;
+//         case "subtract":
+//             return  a - b
+//      break;
+//             case "multiply":
+//                 return  a * b
+//      break
+//      case "divide":
+//          return  a / b
+//      break;
+//  }
+// }
+//
+// function correctPolishLetters (string) {
 
 //.............................................................................
 
@@ -2648,27 +2648,27 @@ function correctPolishLetters (string) {
 //
 //         "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
 
-    const polishToLatin = {
-        "ą": "a",
-        "ć": "c",
-        "ę": "e",
-        "ł": "l",
-        "ń": "n",
-        "ó": "o",
-        "ś": "s",
-        "ź": "z",
-        "ż": "z"
-    };
-return string.split("").map(w => polishToLatin[w] ?  polishToLatin[w] : w).join('')
-}
+//     const polishToLatin = {
+//         "ą": "a",
+//         "ć": "c",
+//         "ę": "e",
+//         "ł": "l",
+//         "ń": "n",
+//         "ó": "o",
+//         "ś": "s",
+//         "ź": "z",
+//         "ż": "z"
+//     };
+// return string.split("").map(w => polishToLatin[w] ?  polishToLatin[w] : w).join('')
+// }
 
 //.............................................................................
 
 // Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
 
-function buildString(...template){
-    return `I like ${template.join(', ')}!`;
-}
+// function buildString(...template){
+//     return `I like ${template.join(', ')}!`;
+// }
 
 //.............................................................................
 
@@ -2679,16 +2679,16 @@ function buildString(...template){
 //     но годы, делящиеся на 400, являются високосными.
 //     Проверенные годы находятся в диапазоне 1600 ≤ year ≤ 4000.
 
-function isLeapYear(year) {
-  if(year % 400 === 0) {
-    return true;
-  } else if (year % 100 === 0) {
-      return false;
-  } else if(year % 4 === 0) {
-      return true
-  }
-  return false;
-}
+// function isLeapYear(year) {
+//   if(year % 400 === 0) {
+//     return true;
+//   } else if (year % 100 === 0) {
+//       return false;
+//   } else if(year % 4 === 0) {
+//       return true
+//   }
+//   return false;
+// }
 
 //.............................................................................
 
@@ -2703,6 +2703,54 @@ function isLeapYear(year) {
 // Число может быть уже отрицательным, в этом случае никаких изменений не требуется.
 // Ноль (0) не проверяется на наличие какого-либо конкретного знака. Отрицательные нули не имеют математического смысла.
 
-const makeNegative = (num) => num > 0 ? -num : num
+// const makeNegative = (num) => num > 0 ? -num : num
 
 //.............................................................................
+
+// На этот раз никакой истории, никакой теории. Примеры ниже покажут вам, как писать функцию accum:
+//
+//     Примеры:
+//         accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// Параметр accum — это строка, включающая только буквы от a..zи A..Z.
+
+    function accum(s) {
+    const split = s.split("")
+    const map = split.map((l, index) =>{
+        const firstLetter = l.toUpperCase()
+        const repeated = l.toLowerCase().repeat(index)
+        return firstLetter + repeated
+    })
+    const join = map.join("-")
+    return join
+}
+
+//.............................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
