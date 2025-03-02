@@ -2762,6 +2762,28 @@ vowelIndices("fokrle")
 // }
 
 //......................................................................
+//
+// На этот раз никакой истории, никакой теории. Примеры ниже покажут вам, как писать функцию accum:
+//
+//     Примеры:
+//         accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// Параметр accum — это строка, включающая только буквы от a..zи A..Z.
+
+function accum(s) {
+    const split = s.split("")
+    const map = split.map((l, index) => {
+        const firstLetter = l.toUpperCase()
+        const repeated = l.toLowerCase().repeat(index)
+        return firstLetter + repeated
+    })
+    const join = map.join("-")
+    return join; // Нужно вернуть результат!
+}
+
+//......................................................................
+
 
 function lowercaseCount(str){
     let countyLetter = 0
