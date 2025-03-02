@@ -2745,22 +2745,69 @@ vowelIndices("fokrle")
 // Рассчитайте расстояние между первым и последним столбом в сантиметрах (без ширины первого и последнего столба).
 //
 
-
-function pillars(numPill, dist, width) {
-    if (numPill === 1) {
-        return 0
-    }
-        const distInCM =  dist * 100
-        return (numPill - 1) * distInCM + (numPill - 2) * width
-}
+// function pillars(numPill, dist, width) {
+//     if (numPill === 1) {
+//         return 0
+//     }
+//         const distInCM =  dist * 100
+//         return (numPill - 1) * distInCM + (numPill - 2) * width
+// }
 
 //......................................................................
 
 // Отсортировать строку букв в алфавитном порядке
 
-function sortGiftCode(code) {
-    return code.split('').sort().join('');
-}
+// function sortGiftCode(code) {
+//     return code.split('').sort().join('');
+// }
 
 //......................................................................
+
+function lowercaseCount(str){
+    let countyLetter = 0
+
+    for (let i = 0; i < str.length; i++){
+       let charCode = str.charCodeAt(i)
+        if ( charCode >= 97 && charCode <= 122) {
+            countyLetter++
+        }
+    }
+    return countyLetter
+
+}
+
+console.log(lowercaseCount("gdfgdgf"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
