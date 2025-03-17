@@ -2810,7 +2810,7 @@ console.log(lowercaseCount("gdfgdgf"))
 // 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
 // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 
-const addBinary = (a,b) => (a + b).toString(2);
+// const addBinary = (a,b) => (a + b).toString(2);
 
 //........................................................................
 
@@ -2824,9 +2824,9 @@ const addBinary = (a,b) => (a + b).toString(2);
 // "Hi! Hi!" ---> "Hi Hi!"
 // "Hi"      ---> "Hi!"
 
-function remove (string) {
-    return [...string].filter(l => l !== "!").join("") + "!"
-}
+// function remove (string) {
+//     return [...string].filter(l => l !== "!").join("") + "!"
+// }
 
 //........................................................................
 
