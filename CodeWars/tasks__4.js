@@ -2870,15 +2870,31 @@ console.log(lowercaseCount("gdfgdgf"))
 // 25  =>  true
 // 26  =>  false
 
-var isSquare = function(n){
-    let result = Math.sqrt(n);
-    return (result % 1 === 0)
-}
+// var isSquare = function(n){
+//     let result = Math.sqrt(n);
+//     return (result % 1 === 0)
+// }
 
 //........................................................................
 
+// Функция pickIt принимает 1 параметр, arr, который является массивом чисел. Нам нужно пройти, arr используя for цикл. Если элемент является нечетным числом, поместить его в odd массив, а если это четное число, поместить его в even массив.
+// Я определил два массива odd и even в функции, а также написал оператор return. Ваша работа — написать for цикл.
 
+// function pickIt(arr){
+//     let odd = [], even = [];
+//
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] % 2 === 0){
+//             even.push(arr[i])
+//         } else {
+//             odd.push(arr[i])
+//         }
+//     }
+//
+//     return [odd,even];
+// }
 
+//........................................................................
 
 
 
