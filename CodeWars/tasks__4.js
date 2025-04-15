@@ -2896,8 +2896,38 @@ console.log(lowercaseCount("gdfgdgf"))
 
 //........................................................................
 
+// В этом простом упражнении вы напишете функцию, которая принимает два целых числа; nи limit; и возвращает список чисел, кратных , nвплоть до , возможно, включая limit.
+//
+//     Гарантируется, что n > 0и limit >= n.
+//
+//     Например, если переданы параметры (2, 6), функция должна возвращать [2, 4, 6]значения 2, 4, а 6значения являются кратными 2до 6.
+//
+// Примеры
+// n = 2; limit = 6 --> [2, 4, 6]
+// n = 2; limit = 5 --> [2, 4]
 
+// function findMultiples(integer, limit) {
+//     let result = []
+//     for (let i = integer; i <= limit; i++){
+//         if (i % integer === 0){
+//             result.push(i)
+//         }
+//     }
+//     return result
+// }
+/// ||
+// function findMultiples(integer, limit) {
+//     let result = []
+//
+//     for (let i = 1; ; i++){
+//        let multiple = integer * i
+//         if (multiple > limit) break
+//         result.push(multiple)
+//     }
+//     return result
+// }
 
+//........................................................................
 
 
 
