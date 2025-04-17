@@ -2720,14 +2720,14 @@ const makeNegative = (num) => num > 0 ? -num : num
 // Гласные в этом контексте относятся к: aeiouy (включая заглавные буквы)
 // Это индексируется от [1..n](не нулевой индекс!)
 
-function vowelIndices(word){
+function vowelIndices(word) {
     let vowels = ["a", "e", "i", "o", "u", "y"];
     let indices = []
 
     word.split('').forEach((w, index) => {
-       if (vowels.includes(w.toLowerCase())){
-           indices.push(index + 1);
-       }
+        if (vowels.includes(w.toLowerCase())) {
+            indices.push(index + 1);
+        }
     })
 
     return indices;
@@ -2784,12 +2784,12 @@ function accum(s) {
 
 //......................................................................
 
-function lowercaseCount(str){
+function lowercaseCount(str) {
     let countyLetter = 0
 
-    for (let i = 0; i < str.length; i++){
-       let charCode = str.charCodeAt(i)
-        if ( charCode >= 97 && charCode <= 122) {
+    for (let i = 0; i < str.length; i++) {
+        let charCode = str.charCodeAt(i)
+        if (charCode >= 97 && charCode <= 122) {
             countyLetter++
         }
     }
@@ -2928,6 +2928,28 @@ console.log(lowercaseCount("gdfgdgf"))
 // }
 
 //........................................................................
+
+// Две красные бусины помещены между каждыми двумя синими бусинами. Всего синих бусин N. Посмотрев на расположение ниже, посчитайте количество красных бусин.
+//
+//     @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @
+//
+//     Реализуйте функцию, возвращающую количество красных бусин.
+//     Если синих бусин меньше 2, верните 0.
+
+// const countRedBeads = (n) => n < 2 ? 0 : (n - 1) * 2
+
+//........................................................................
+
+
+
+
+
+
+
+
+
+
+
 
 
 
