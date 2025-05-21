@@ -2943,17 +2943,22 @@ console.log(lowercaseCount("gdfgdgf"))
 // This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
 // Add the value "codewars" to the array websites 1,000 times.
 
-let websites = []
-
-  for (let i = 1; i <= 1000; i++) {
-      websites.push("codewars")
-  }
-
-console.log(websites)
+// let websites = []
+//
+//   for (let i = 1; i <= 1000; i++) {
+//       websites.push("codewars")
+//   }
+//
+// console.log(websites)
 
 //........................................................................
 
+// Create a function called _if which takes 3 arguments: a value bool and 2 functions (which do not take any parameters): func1 and func2
+// When bool is truthy, func1 should be called, otherwise call the func2.
 
+// const _if = (bool, func1, func2) => bool ? func1() : func2()
+
+//........................................................................
 
 
 
