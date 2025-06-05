@@ -2720,20 +2720,20 @@ const makeNegative = (num) => num > 0 ? -num : num
 // Гласные в этом контексте относятся к: aeiouy (включая заглавные буквы)
 // Это индексируется от [1..n](не нулевой индекс!)
 
-function vowelIndices(word) {
-    let vowels = ["a", "e", "i", "o", "u", "y"];
-    let indices = []
-
-    word.split('').forEach((w, index) => {
-        if (vowels.includes(w.toLowerCase())) {
-            indices.push(index + 1);
-        }
-    })
-
-    return indices;
-}
-
-vowelIndices("fokrle")
+// function vowelIndices(word) {
+//     let vowels = ["a", "e", "i", "o", "u", "y"];
+//     let indices = []
+//
+//     word.split('').forEach((w, index) => {
+//         if (vowels.includes(w.toLowerCase())) {
+//             indices.push(index + 1);
+//         }
+//     })
+//
+//     return indices;
+// }
+//
+// vowelIndices("fokrle")
 
 //......................................................................
 
@@ -2771,33 +2771,33 @@ vowelIndices("fokrle")
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // Параметр accum — это строка, включающая только буквы от a..zи A..Z.
 
-function accum(s) {
-    const split = s.split("")
-    const map = split.map((l, index) => {
-        const firstLetter = l.toUpperCase()
-        const repeated = l.toLowerCase().repeat(index)
-        return firstLetter + repeated
-    })
-    const join = map.join("-")
-    return join; // Нужно вернуть результат!
-}
+// function accum(s) {
+//     const split = s.split("")
+//     const map = split.map((l, index) => {
+//         const firstLetter = l.toUpperCase()
+//         const repeated = l.toLowerCase().repeat(index)
+//         return firstLetter + repeated
+//     })
+//     const join = map.join("-")
+//     return join; // Нужно вернуть результат!
+// }
 
 //......................................................................
 
-function lowercaseCount(str) {
-    let countyLetter = 0
-
-    for (let i = 0; i < str.length; i++) {
-        let charCode = str.charCodeAt(i)
-        if (charCode >= 97 && charCode <= 122) {
-            countyLetter++
-        }
-    }
-    return countyLetter
-
-}
-
-console.log(lowercaseCount("gdfgdgf"))
+// function lowercaseCount(str) {
+//     let countyLetter = 0
+//
+//     for (let i = 0; i < str.length; i++) {
+//         let charCode = str.charCodeAt(i)
+//         if (charCode >= 97 && charCode <= 122) {
+//             countyLetter++
+//         }
+//     }
+//     return countyLetter
+//
+// }
+//
+// console.log(lowercaseCount("gdfgdgf"))
 
 //........................................................................
 
@@ -2998,7 +2998,17 @@ console.log(lowercaseCount("gdfgdgf"))
 
 //........................................................................
 
+// class Animal {
+//     constructor(name, type) {
+//         this.type = type
+//         this.name = name
+//     }
+//     toString() {
+//         return `${this.name} is a ${this.type}`
+//     }
+// }
 
+//........................................................................
 
 
 
