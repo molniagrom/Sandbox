@@ -3010,43 +3010,63 @@ const makeNegative = (num) => num > 0 ? -num : num
 
 //........................................................................
 
-class Shark extends Animal {
-    constructor(name, age, status) {
-        super(name, age, 0, "shark", status);
-    }
+// class Shark extends Animal {
+//     constructor(name, age, status) {
+//         super(name, age, 0, "shark", status);
+//     }
+//
+//     introduce(){
+//         return `Hello, my name is ${this.name} and I am ${this.age} years old.`
+//     }
+// }
+//
+// class Cat extends Animal {
+//     constructor(name, age, status) {
+//         super(name, age, 4, "cat", status);
+//     }
+//
+//     introduce(){
+//         return `Hello, my name is ${this.name} and I am ${(this.age)} years old.  Meow meow!`
+//     }
+// }
 
-    introduce(){
-        return `Hello, my name is ${this.name} and I am ${this.age} years old.`
-    }
-}
-
-class Cat extends Animal {
-    constructor(name, age, status) {
-        super(name, age, 4, "cat", status);
-    }
-
-    introduce(){
-        return `Hello, my name is ${this.name} and I am ${(this.age)} years old.  Meow meow!`
-    }
-}
-
-class Dog  extends Animal {
-    constructor(name, age, status, master) {
-        super(name, age, 4, "dog", status);
-        this.master = master
-    }
-
-    greetMaster() {
-        return `Hello ${this.master}`
-    }
-
-}
+// class Dog  extends Animal {
+//     constructor(name, age, status, master) {
+//         super(name, age, 4, "dog", status);
+//         this.master = master
+//     }
+//
+//     greetMaster() {
+//         return `Hello ${this.master}`
+//     }
+//
+// }
 
 //........................................................................
 
+// Given a mixed array of number and string representations of integers, add up the non-string integers and subtract the total of the string integers.
 
+//  Return as a number.
 
+// function divCon(x){
+//  let num = []
+//  let str = []
+//
+//     for (let i = 0; i < x.length; i++) {
+//         if(typeof x[i] === 'number'){
+//             num.push(x[i])
+//         } else if (typeof x[i] === 'string'){
+//             str.push(x[i])
+//         }
+//     }
+//
+//     let sumNum = num.reduce((a,b) => a + b, 0)
+//     let subtractStr = str.map(Number).reduce((a,b) => a + b, 0)
+//
+//     return sumNum - subtractStr
+// }
 
+//........................................................................
 
 
 
