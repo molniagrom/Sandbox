@@ -3089,11 +3089,40 @@ const makeNegative = (num) => num > 0 ? -num : num
 
 //........................................................................
 
+// const obj10 = {
+//     users: [
+//         {
+//             id: 1,
+//             info: {
+//                 name: "Dana",
+//                 hobbies: ["reading", "sports"]
+//             }
+//         },
+//         {
+//             id: 2,
+//             info: {
+//                 name: "Eli",
+//                 hobbies: ["coding", { deep: "dive" }]
+//             }
+//         }
+//     ],
+//     meta: {
+//         version: 1,
+//         created: new Date(),
+//         active: true
+//     }
+// };
+//
+// const copy = structuredClone(obj10);
+//
+// console.log(obj10);
+// console.log(copy);
 
+//........................................................................
 
-
-
-
+function shortenToDate(longDate) {
+    return longDate.slice(0, -3);
+}
 
 
 
